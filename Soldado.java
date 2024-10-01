@@ -1,7 +1,7 @@
 public class Soldado {
-	private String nombre;
-	private String id;
-	private String rango;
+	protected String nombre;
+	protected String id;
+	protected String rango;
 
 	public Soldado(String nombre, String id, String rango) {
 		this.nombre = nombre;
