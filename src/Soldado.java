@@ -1,18 +1,23 @@
-public class Soldado {
+public class Soldado extends Rango{
 	protected String nombre;
 	protected String id;
-	protected String rango;
 
-	public Soldado(String nombre, String id, String rango) {
+	public Soldado(String nombre, String id, RangoEnum rango) {
+		super(rango);
 		this.nombre = nombre;
 		this.id = id;
-		this.rango = rango;
 	}
 
-	void mostrarInformacion() {
+	public void mostrarInformacion() {
 		System.out.println("Nombre: " + nombre);
 		System.out.println("ID: " + id);
 		System.out.println("Rango: " + rango);
+		System.out.println("Nivel: " + nivel);
+	}
+
+	@Override
+	public void realizarAccion() {
+		System.out.println("Soldado fuera de jerarqu?a");
 	}
 
 	public String getNombre() {
@@ -32,10 +37,31 @@ public class Soldado {
 	}
 
 	public String getRango() {
-		return rango;
+		return rango.toString();
 	}
 
-	public void setRango(String rango) {
+	public void setRango(RangoEnum rango) {
 		this.rango = rango;
+		switch (rango) {
+			case Soldado_Raso:
+				this.nivel = 4;
+				break;
+			case Teniente:
+				this.nivel = 3;
+				break;
+			case Capitan:
+				this.nivel = 2;
+				break;
+			case Coronel:
+				this.nivel = 1;
+				break;
+			default:
+				this.nivel = 0;
+				break;
+		}
+	}
+
+	public int getNivel() {
+		return nivel;
 	}
 }
