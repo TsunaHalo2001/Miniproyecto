@@ -18,4 +18,5 @@ public class Capitan extends Soldado{
 	public void setCantidadSoldadosBajoSuMando(int cantidadSoldadosBajoSuMando) {
 		this.cantidadSoldadosBajoSuMando = cantidadSoldadosBajoSuMando;
 	}
+
 }

@@ -11,4 +11,5 @@ public class Coronel extends Soldado {
 	public void realizarAccion() {
 		System.out.println("Planificar estrategias");
 	}
+
 }

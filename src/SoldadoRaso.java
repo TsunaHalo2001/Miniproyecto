@@ -7,4 +7,6 @@ public class SoldadoRaso extends Soldado {
 	public void realizarAccion() {
 		System.out.println("Seguir ordenes de sus superiores");
 	}
+	
+
 }

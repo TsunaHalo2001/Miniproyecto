@@ -1,4 +1,4 @@
-public class Soldado extends Rango{
+public class Soldado extends Rango implements OperacionesMilitares{
 	protected String nombre;
 	protected String id;
 
@@ -64,4 +64,49 @@ public class Soldado extends Rango{
 	public int getNivel() {
 		return nivel;
 	}
+
+	@Override
+	public void asignarMision(String mision) {
+		
+		String nombre = getNombre();
+		String rango = getRango();
+		System.out.println(rango +" "+ nombre + " Se le a asignado " + mision);	
+	}
+
+	@Override
+	public void reportarEstadoMision(EstadoEnum estadoMision) {
+
+		switch (estadoMision) {
+			case Comenzada:
+			System.out.println("Mision comenzada.");
+				break;
+
+			case En_Proceso:
+			System.out.println("Mision en proceso.");
+				break;
+
+			case Terminada:
+				System.out.println("la mision a sido finalizada.");
+				break;
+
+			default:
+				System.out.println("No hay mision que reportar");
+				break;
+		}
+
+
+	}
+
+	@Override
+	public void reportarEstado(int nivel) {
+		nivel = getNivel();
+		if (nivel < 4){
+			System.out.println("dando informacion del soldado.");
+		}
+		else{
+			System.out.println("no tienes el nivel suficiente para reportar.");
+		}
+
+	}
+
 }
