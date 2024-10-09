@@ -1,4 +1,4 @@
-public class Teniente extends Soldado {
+public class Teniente extends Soldado{
 	protected String unidad;
 
 	public Teniente(String nombre, String id, String unidad) {
@@ -18,4 +18,6 @@ public class Teniente extends Soldado {
 	public void setUnidad(String unidad) {
 		this.unidad = unidad;
 	}
+
+
 }
