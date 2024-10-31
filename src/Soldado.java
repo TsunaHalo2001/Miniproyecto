@@ -1,11 +1,13 @@
 public class Soldado extends Rango implements OperacionesMilitares{
 	protected String nombre;
 	protected String id;
+	protected String unidad;
 
-	public Soldado(String nombre, String id, RangoEnum rango) {
+	public Soldado(String nombre, String id, RangoEnum rango, String unidad) {
 		super(rango);
 		this.nombre = nombre;
 		this.id = id;
+		this.unidad = unidad;
 	}
 
 	public void mostrarInformacion() {
@@ -13,6 +15,7 @@ public class Soldado extends Rango implements OperacionesMilitares{
 		System.out.println("ID: " + id);
 		System.out.println("Rango: " + rango);
 		System.out.println("Nivel: " + nivel);
+		System.out.println("Unidad: " + unidad);
 	}
 
 	@Override
@@ -63,6 +66,14 @@ public class Soldado extends Rango implements OperacionesMilitares{
 
 	public int getNivel() {
 		return nivel;
+	}
+
+	public String getUnidad() {
+		return unidad;
+	}
+
+	public void setUnidad(String unidad) {
+		this.unidad = unidad;
 	}
 
 	@Override

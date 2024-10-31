@@ -1,12 +1,16 @@
-public class SoldadoRaso extends Soldado {
-	public SoldadoRaso(String nombre, String id) {
-		super(nombre, id, RangoEnum.Soldado_Raso);
+public class SoldadoRaso extends Soldado implements Subordinados {
+
+	public SoldadoRaso(String nombre, String id, String unidad) {
+		super(nombre, id, RangoEnum.Soldado_Raso, unidad);
 	}
 
 	@Override
 	public void realizarAccion() {
-		System.out.println("Seguir ordenes de sus superiores");
+		System.out.print("El soldado raso " + nombre + " sigue las ordenes de ");
 	}
 	
-
+	public void realizarAccion(Soldado superior) {
+		realizarAccion();
+		System.out.println(superior.getNombre());
+	}
 }
