@@ -1,3 +1,8 @@
+package Soldados;
+
+import Enum.RangoEnum;
+import Interfaces.Subordinados;
+
 public class Capitan extends Soldado implements Subordinados {
 	protected int cantidadSoldadosBajoSuMando;
 

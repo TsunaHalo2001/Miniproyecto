@@ -1,3 +1,5 @@
+package Enum;
+
 public enum RangoEnum {
 	Soldado_Raso,
 	Teniente,

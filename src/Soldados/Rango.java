@@ -1,3 +1,7 @@
+package Soldados;
+
+import Enum.RangoEnum;
+
 public abstract class Rango {
 	RangoEnum rango;
 	protected int nivel;
