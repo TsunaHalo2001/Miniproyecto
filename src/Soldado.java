@@ -1,15 +1,21 @@
 public class Soldado extends Rango implements OperacionesMilitares{
+	private static int contadorSoldado = 0 ; 
 	protected String nombre;
-	protected String id;
 	protected String unidad;
+	protected final String id;
 
 	public Soldado(String nombre, String id, RangoEnum rango, String unidad) {
 		super(rango);
 		this.nombre = nombre;
 		this.id = id;
 		this.unidad = unidad;
+		contadorSoldado++;
 	}
 
+	public static int getContadorSoldados() {
+        return contadorSoldado;
+    }
+	
 	public void mostrarInformacion() {
 		System.out.println("Nombre: " + nombre);
 		System.out.println("ID: " + id);
@@ -33,10 +39,6 @@ public class Soldado extends Rango implements OperacionesMilitares{
 
 	public String getId() {
 		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public String getRango() {
@@ -118,6 +120,9 @@ public class Soldado extends Rango implements OperacionesMilitares{
 			System.out.println("no tienes el nivel suficiente para reportar.");
 		}
 
+
+
 	}
+	
 
 }
