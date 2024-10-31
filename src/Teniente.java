@@ -1,23 +1,25 @@
-public class Teniente extends Soldado{
-	protected String unidad;
+public class Teniente extends Soldado implements Subordinados {
 
 	public Teniente(String nombre, String id, String unidad) {
-		super(nombre, id, RangoEnum.Teniente);
-		this.unidad = unidad;
+		super(nombre, id, RangoEnum.Teniente, unidad);
 	}
 
 	@Override
 	public void realizarAccion() {
-		System.out.println("Supervisar soldados rasos");
+		System.out.print("El teniente " + nombre + " sigue las ordenes de ");
 	}
 
-	public String getUnidad() {
-		return unidad;
+	@Override
+	public void realizarAccion(Soldado superior) {
+		realizarAccion();
+		System.out.println(superior.getNombre());
 	}
 
-	public void setUnidad(String unidad) {
-		this.unidad = unidad;
+	public void darOrden(SoldadoRaso subordinado) {
+		if (subordinado.getUnidad().equals(unidad)) {
+			System.out.print("El teniente " + nombre + " da la orden a ");
+			subordinado.realizarAccion(this);
+		}
+		else System.out.println("El teniente " + nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre());
 	}
-
-
 }
