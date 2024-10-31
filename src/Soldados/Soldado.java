@@ -1,3 +1,9 @@
+package Soldados;
+
+import Enum.EstadoEnum;
+import Enum.RangoEnum;
+import Interfaces.OperacionesMilitares;
+
 public class Soldado extends Rango implements OperacionesMilitares{
 	private static int contadorSoldado = 0 ; 
 	protected String nombre;

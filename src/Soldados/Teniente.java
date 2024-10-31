@@ -1,3 +1,8 @@
+package Soldados;
+
+import Enum.RangoEnum;
+import Interfaces.Subordinados;
+
 public class Teniente extends Soldado implements Subordinados {
 
 	public Teniente(String nombre, String id, String unidad) {

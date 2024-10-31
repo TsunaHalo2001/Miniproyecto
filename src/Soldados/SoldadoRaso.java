@@ -1,3 +1,8 @@
+package Soldados;
+
+import Enum.RangoEnum;
+import Interfaces.Subordinados;
+
 public class SoldadoRaso extends Soldado implements Subordinados {
 
 	public SoldadoRaso(String nombre, String id, String unidad) {

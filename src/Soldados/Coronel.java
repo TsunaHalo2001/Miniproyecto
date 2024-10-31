@@ -1,3 +1,7 @@
+package Soldados;
+
+import Enum.RangoEnum;
+
 public class Coronel extends Soldado {
 	protected String estrategia;
 
