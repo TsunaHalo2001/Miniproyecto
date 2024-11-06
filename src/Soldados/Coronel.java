@@ -38,4 +38,12 @@ public class Coronel extends Soldado {
 		}
 		else System.out.println("El coronel " + nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre());
 	}
+
+	public String getEstrategia() {
+		return estrategia;
+	}
+
+	public void setEstrategia(String estrategia) {
+		this.estrategia = estrategia;
+	}
 }
