@@ -178,7 +178,7 @@ public class App {
 
                 case "4":
                     System.out.println("Seleccione el tipo de acción que desea realizar: ");
-                    String accion = "1.-Dar orden \n2.-Realizar acción";
+                    String accion = "1.-Dar orden";
                     System.out.println("--------------------");
                     System.out.println(accion);
                     System.out.println("--------------------");
@@ -206,38 +206,7 @@ public class App {
                                 }
                             }
                         }
-
-                 break;
-
-                        case "2":
-                            System.out.print("Digite el ID del soldado que desea realizar una acción: ");
-                            String id_Superior  = opcion.nextLine();
-                            for (Soldado superior : listaSoldados) {
-                                if (superior.getId().equals(id_Superior)) {
-                                    System.out.print("Digite el ID del subordinado: ");
-                                    String id_Subordinado = opcion.nextLine();
-                                    for (Soldado subordinado : listaSoldados) {
-                                        if (subordinado.getId().equals(id_Subordinado)) {
-                                            if ( superior instanceof Coronel ){
-                                                ((Coronel) superior).realizarAccion();
-                                            } if ( superior instanceof Coronel && subordinado instanceof Capitan ) {
-                                                ((Coronel) superior).realizarAccion((Capitan) subordinado);
-                                            } else if (superior instanceof Capitan && subordinado instanceof Teniente) {
-                                                ((Capitan) superior).realizarAccion((Teniente) subordinado);
-                                            } else if (superior instanceof Teniente && subordinado instanceof SoldadoRaso) {
-                                                ((Teniente) superior).realizarAccion((SoldadoRaso) subordinado);
-                                            } else {
-                                                System.out.println("El subordinado no tiene un rango inferior adecuado para recibir órdenes.");
-                                            }
-                                        }
-                                    }
-                               }
-                            }
-                            break;
-
-                        default:
-                            System.out.println("Opcion ingresada no valida, vuelva a intentar.");
-                            break;
+                        break;
                     }
                     break;
 
