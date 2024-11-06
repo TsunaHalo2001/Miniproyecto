@@ -202,6 +202,7 @@ public class App {
                                         } else {
                                             System.out.println("El subordinado no tiene un rango inferior adecuado para recibir órdenes.");
                                         }
+
                                     }
                                 }
                             }
