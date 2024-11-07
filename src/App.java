@@ -121,7 +121,7 @@ public class App {
                                 if (!idExistenteR) { 
                                     System.out.print("Ingrese la unidad a la que pertenece: ");
                                     String unidadRaso = opcion.nextLine();
-                                    listaSoldados.add(new SoldadoRaso(nombreSoldado, unidadRaso, idSoldado));
+                                    listaSoldados.add(new SoldadoRaso(nombreSoldado, idSoldado, unidadRaso));
                                     System.out.println("Coronel agregado con éxito.");
                                 } else {
                                     System.out.println("No se ha agregado el Soldado raso debido a un ID duplicado.");
