@@ -18,4 +18,5 @@ public class SoldadoRaso extends Soldado implements Subordinados {
 		realizarAccion();
 		System.out.println(superior.getNombre());
 	}
+	
 }
