@@ -23,6 +23,7 @@ public class Teniente extends Soldado implements Subordinados {
 	public void darOrden(SoldadoRaso subordinado) {
 		if (subordinado.getUnidad().equals(unidad)) {
 			System.out.print("El teniente " + nombre + " da la orden a ");
+			System.out.println(subordinado.getNombre());
 			subordinado.realizarAccion(this);
 		}
 		else System.out.println("El teniente " + nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre());
