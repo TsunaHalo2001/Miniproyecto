@@ -1,6 +1,6 @@
-package Soldados;
+package miniproyecto.Soldados;
 
-import Enum.RangoEnum;
+import miniproyecto.Enum.RangoEnum;
 
 public class Coronel extends Soldado {
 	protected String estrategia;

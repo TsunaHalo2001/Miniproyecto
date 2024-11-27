@@ -1,4 +1,4 @@
-package Enum;
+package miniproyecto.Enum;
 
 public enum RangoEnum {
 	Soldado_Raso,

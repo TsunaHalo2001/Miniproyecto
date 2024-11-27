@@ -1,10 +1,10 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import Soldados.Soldado;
-import Soldados.Coronel;
-import Soldados.Capitan;
-import Soldados.Teniente;
-import Soldados.SoldadoRaso;
+import miniproyecto.Soldados.Soldado;
+import miniproyecto.Soldados.Coronel;
+import miniproyecto.Soldados.Capitan;
+import miniproyecto.Soldados.Teniente;
+import miniproyecto.Soldados.SoldadoRaso;
 
 public class App {
     public static void main(String[] args) {
