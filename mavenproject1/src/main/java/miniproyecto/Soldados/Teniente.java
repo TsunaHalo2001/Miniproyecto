@@ -1,7 +1,7 @@
-package Soldados;
+package miniproyecto.Soldados;
 
-import Enum.RangoEnum;
-import Interfaces.Subordinados;
+import miniproyecto.Enum.RangoEnum;
+import miniproyecto.Interfaces.Subordinados;
 
 public class Teniente extends Soldado implements Subordinados {
 

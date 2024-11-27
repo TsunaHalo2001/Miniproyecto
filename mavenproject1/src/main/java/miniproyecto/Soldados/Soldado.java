@@ -1,8 +1,8 @@
-package Soldados;
+package miniproyecto.Soldados;
 
-import Enum.EstadoEnum;
-import Enum.RangoEnum;
-import Interfaces.OperacionesMilitares;
+import miniproyecto.Enum.EstadoEnum;
+import miniproyecto.Enum.RangoEnum;
+import miniproyecto.Interfaces.OperacionesMilitares;
 
 public class Soldado extends Rango implements OperacionesMilitares{
 	private static int contadorSoldado = 0 ; 

@@ -1,6 +1,6 @@
-package Interfaces;
+package miniproyecto.Interfaces;
 
-import Soldados.Soldado;
+import miniproyecto.Soldados.Soldado;
 
 public interface Subordinados {
 	public abstract void realizarAccion(Soldado superior);

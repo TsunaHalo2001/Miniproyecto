@@ -1,6 +1,6 @@
-package Interfaces;
+package miniproyecto.Interfaces;
 
-import Enum.EstadoEnum;
+import miniproyecto.Enum.EstadoEnum;
 
 public interface OperacionesMilitares {
     public abstract void asignarMision(String mision);
