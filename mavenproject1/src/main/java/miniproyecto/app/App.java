@@ -1,3 +1,5 @@
+package miniproyecto.app;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import miniproyecto.Soldados.Soldado;
@@ -9,7 +11,7 @@ import miniproyecto.Soldados.SoldadoRaso;
 public class App {
     public static void main(String[] args) {
         Scanner opcion = new Scanner(System.in);
-        ArrayList<Soldado> listaSoldados = new ArrayList<>();
+        ArrayList<Soldado> listaSoldados = new ArrayList<>(); 
         
         while (true) {
             System.out.println("Bienvenido al sistema de gestion militar, seleccione una opcion: ");
