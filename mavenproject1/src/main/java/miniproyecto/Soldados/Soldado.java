@@ -5,7 +5,8 @@ import miniproyecto.Enum.RangoEnum;
 import miniproyecto.Interfaces.OperacionesMilitares;
 
 public class Soldado extends Rango implements OperacionesMilitares{
-	private static int contadorSoldado = 0 ; 
+	private static int contadorSoldado = 0 ;
+	protected int contSoldado;
 	protected String nombre;
 	protected String unidad;
 	protected final String id;
@@ -16,23 +17,39 @@ public class Soldado extends Rango implements OperacionesMilitares{
 		this.id = id;
 		this.unidad = unidad;
 		contadorSoldado++;
+		this.contSoldado = contadorSoldado;
 	}
 
 	public static int getContadorSoldados() {
         return contadorSoldado;
     }
 	
-	public void mostrarInformacion() {
-		System.out.println("Nombre: " + nombre);
-		System.out.println("ID: " + id);
-		System.out.println("Rango: " + rango);
-		System.out.println("Nivel: " + nivel);
-		System.out.println("Unidad: " + unidad);
+	public String[] mostrarInformacion() {
+		String[] info = new String[5];
+		info[0] = "Nombre: " + nombre;
+		info[1] = "ID: " + id;
+		info[2] = "Rango: " + rango;
+		info[3] = "Nivel: " + nivel;
+		info[4] = "Unidad: " + unidad;
+
+		return info;
+	}
+
+	public String patrullar() {
+		return "El soldado " + nombre + " est? patrullando.";
+	}
+
+	public String saludar(Soldado soldado) {
+		return "El soldado " + nombre + " saluda al soldado " + soldado.nombre + ".";
+	}
+
+	public String reganiado (Soldado soldado) {
+		return "El soldado " + nombre + " ha sido reganiado por el soldado " + soldado.nombre + ".";
 	}
 
 	@Override
-	public void realizarAccion() {
-		System.out.println("Soldado fuera de jerarqu?a");
+	public String realizarAccion() {
+		return "Soldado fuera de jerarqu?a";
 	}
 
 	public String getNombre() {
@@ -84,51 +101,49 @@ public class Soldado extends Rango implements OperacionesMilitares{
 		this.unidad = unidad;
 	}
 
-	@Override
-	public void asignarMision(String mision) {
-		
-		String nombre = getNombre();
-		String rango = getRango();
-		System.out.println(rango +" "+ nombre + " Se le a asignado " + mision);	
+	public int getContSoldado() {
+		return contSoldado;
+	}
+
+	public void setContSoldado(int contSoldado) {
+		this.contSoldado = contSoldado;
+	}
+
+	public static void resetear() {
+		contadorSoldado = 0;
+	}
+
+	public static void setContSoldiers(int contSoldado) {
+		Soldado.contadorSoldado = contSoldado;
 	}
 
 	@Override
-	public void reportarEstadoMision(EstadoEnum estadoMision) {
+	public String asignarMision(String mision) {
+		
+		return this.rango +" "+ this.nombre + " Se le a asignado " + mision;
+	}
+
+	@Override
+	public String reportarEstadoMision(EstadoEnum estadoMision) {
 
 		switch (estadoMision) {
 			case Comenzada:
-			System.out.println("Mision comenzada.");
-				break;
+				return "Mision comenzada.";
 
 			case En_Proceso:
-			System.out.println("Mision en proceso.");
-				break;
+				return "Mision en proceso.";
 
 			case Terminada:
-				System.out.println("la mision a sido finalizada.");
-				break;
+				return "Mision terminada.";
 
 			default:
-				System.out.println("No hay mision que reportar");
-				break;
+				return "No hay mision que reportar.";
 		}
-
-
 	}
 
 	@Override
-	public void reportarEstado(int nivel) {
-		nivel = getNivel();
-		if (nivel < 4){
-			System.out.println("dando informacion del soldado.");
-		}
-		else{
-			System.out.println("no tienes el nivel suficiente para reportar.");
-		}
-
-
-
+	public String reportarEstado(int nivel) {
+		if (nivel < 4) return "dando informacion del soldado.";
+		else return "no tienes el nivel suficiente para reportar.";
 	}
-	
-
 }

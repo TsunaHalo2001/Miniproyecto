@@ -11,35 +11,23 @@ public class Coronel extends Soldado {
 	}
 	
 	@Override
-	public void realizarAccion() {
-		System.out.println("El coronel " + nombre + " implementa la estrategia " + estrategia);
+	public String realizarAccion() {
+		return "El coronel " + nombre + " implementa la estrategia " + estrategia;
 	}
 
-	public void darOrden(Capitan subordinado) {
-		if (subordinado.getUnidad().equals(unidad)) {
-			System.out.print("El coronel " + nombre + " da la orden a ");
-			System.out.println(subordinado.getNombre());
-			subordinado.realizarAccion(this);
-		}
-		else System.out.println("El coronel " + nombre + " no tiene autoridad sobre el capitan " + subordinado.getNombre());
+	public String darOrden(Capitan subordinado) {
+		if (subordinado.getUnidad().equals(unidad)) return "El coronel " + this.nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this);
+		else return "El coronel " + this.nombre + " no tiene autoridad sobre el capitan " + subordinado.getNombre();
 	}
 
-	public void darOrden(Teniente subordinado) {
-		if (subordinado.getUnidad().equals(unidad)) {
-			System.out.print("El coronel " + nombre + " da la orden a ");
-			System.out.println(subordinado.getNombre());
-			subordinado.realizarAccion(this);
-		}
-		else System.out.println("El coronel " + nombre + " no tiene autoridad sobre el teniente " + subordinado.getNombre());
+	public String darOrden(Teniente subordinado) {
+		if (subordinado.getUnidad().equals(unidad)) return "El coronel " + this.nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this);
+		else return "El coronel " + this.nombre + " no tiene autoridad sobre el teniente " + subordinado.getNombre();
 	}
 
-	public void darOrden(SoldadoRaso subordinado) {
-		if (subordinado.getUnidad().equals(unidad)) {
-			System.out.print("El coronel " + nombre + " da la orden a ");
-			System.out.println(subordinado.getNombre());
-			subordinado.realizarAccion(this);
-		}
-		else System.out.println("El coronel " + nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre());
+	public String darOrden(SoldadoRaso subordinado) {
+		if (subordinado.getUnidad().equals(unidad)) return "El coronel " + this.nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this);
+		else return "El coronel " + this.nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre();
 	}
 
 	public String getEstrategia() {

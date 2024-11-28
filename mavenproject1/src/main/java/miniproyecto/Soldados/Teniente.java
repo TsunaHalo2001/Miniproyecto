@@ -10,22 +10,17 @@ public class Teniente extends Soldado implements Subordinados {
 	}
 
 	@Override
-	public void realizarAccion() {
-		System.out.print("El teniente " + nombre + " sigue las ordenes de ");
+	public String realizarAccion() {
+		return "El teniente " + nombre + " sigue las ordenes de ";
 	}
 
 	@Override
-	public void realizarAccion(Soldado superior) {
-		realizarAccion();
-		System.out.println(superior.getNombre());
+	public String realizarAccion(Soldado superior) {
+		return realizarAccion() + superior.getNombre();
 	}
 
-	public void darOrden(SoldadoRaso subordinado) {
-		if (subordinado.getUnidad().equals(unidad)) {
-			System.out.print("El teniente " + nombre + " da la orden a ");
-			System.out.println(subordinado.getNombre());
-			subordinado.realizarAccion(this);
-		}
-		else System.out.println("El teniente " + nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre());
+	public String darOrden(SoldadoRaso subordinado) {
+		if (subordinado.getUnidad().equals(unidad)) return "El teniente " + this.nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this);
+		else return "El teniente " + this.nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre();
 	}
 }

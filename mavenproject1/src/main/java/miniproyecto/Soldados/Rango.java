@@ -27,5 +27,5 @@ public abstract class Rango {
 		}
 	}
 
-	abstract void realizarAccion();
+	abstract String realizarAccion();
 }

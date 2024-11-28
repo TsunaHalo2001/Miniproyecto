@@ -4,6 +4,11 @@
  */
 package miniproyecto.Menu;
 
+import javax.swing.DefaultListModel;
+
+import miniproyecto.Soldados.Soldado;
+import miniproyecto.app.Logica;
+
 /**
  *
  * @author user
@@ -15,6 +20,7 @@ public class Realizar_Accion extends javax.swing.JFrame {
      */
     public Realizar_Accion() {
         initComponents();
+        leerLista();
     }
 
     /**
@@ -28,7 +34,6 @@ public class Realizar_Accion extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -51,16 +56,6 @@ public class Realizar_Accion extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Realizar Accion");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jButton2.setBackground(new java.awt.Color(51, 51, 51));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,6 +75,11 @@ public class Realizar_Accion extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Volver");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(51, 51, 51));
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -102,7 +102,6 @@ public class Realizar_Accion extends javax.swing.JFrame {
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
@@ -110,8 +109,6 @@ public class Realizar_Accion extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,10 +127,12 @@ public class Realizar_Accion extends javax.swing.JFrame {
 
         jList1.setBackground(new java.awt.Color(51, 51, 51));
         jList1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jList1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(jList1);
 
         jList2.setBackground(new java.awt.Color(51, 51, 51));
         jList2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jList2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jList2);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -148,10 +147,16 @@ public class Realizar_Accion extends javax.swing.JFrame {
         jButton7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Dar Orden");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
 
-        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("a");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -230,14 +235,230 @@ public class Realizar_Accion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        Menu men = new Menu();
+        men.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        // TODO add your handling code here:
+        System.out.println("F");
+        if (jList1.getSelectedIndex() != -1 || jList2.getSelectedIndex() != -1) return;
+
+        for (int i = 0; i < Logica.listaSoldadoRaso.size(); i++) {
+            if (Logica.listaSoldadoRaso.get(i).getContSoldado() == jList1.getSelectedIndex() + 1) {
+                for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) {
+                    if (Logica.listaSoldadoRaso.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El soldado no puede dar orden a otro soldado raso");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaTeniente.size(); j++) {
+                    if (Logica.listaTeniente.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText(Logica.listaTeniente.get(j).darOrden(Logica.listaSoldadoRaso.get(i)));
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCoronel.size(); j++) {
+                    if (Logica.listaCoronel.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText(Logica.listaCoronel.get(j).darOrden(Logica.listaSoldadoRaso.get(i)));
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCapitan.size(); j++) {
+                    if (Logica.listaCapitan.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText(Logica.listaCapitan.get(j).darOrden(Logica.listaSoldadoRaso.get(i)));
+                        return;
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < Logica.listaTeniente.size(); i++) {
+            if (Logica.listaTeniente.get(i).getContSoldado() == jList1.getSelectedIndex() + 1) {
+                for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) {
+                    if (Logica.listaSoldadoRaso.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El soldado Raso no puede dar orden a un teniente");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaTeniente.size(); j++) {
+                    if (Logica.listaTeniente.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El teniente no puede dar orden a otro teniente");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCoronel.size(); j++) {
+                    if (Logica.listaCoronel.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText(Logica.listaCoronel.get(j).darOrden(Logica.listaTeniente.get(i)));
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCapitan.size(); j++) {
+                    if (Logica.listaCapitan.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText(Logica.listaCapitan.get(j).darOrden(Logica.listaTeniente.get(i)));
+                        return;
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < Logica.listaCapitan.size() ; i++) {
+            if (Logica.listaCapitan.get(i).getContSoldado() == jList1.getSelectedIndex() + 1) {
+                for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) {
+                    if (Logica.listaSoldadoRaso.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El soldado Raso no puede dar orden a un capitan");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaTeniente.size(); j++) {
+                    if (Logica.listaTeniente.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El teniente no puede dar orden a un capitan");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCoronel.size(); j++) {
+                    if (Logica.listaCoronel.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El coronel no puede dar orden a un capitan");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCapitan.size(); j++) {
+                    if (Logica.listaCapitan.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El capitan no puede dar orden a otro capitan");
+                        return;
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < Logica.listaCoronel.size(); i++) {
+            if (Logica.listaCoronel.get(i).getContSoldado() == jList1.getSelectedIndex() + 1) {
+                for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) {
+                    if (Logica.listaSoldadoRaso.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El soldado Raso no puede dar orden a un coronel");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaTeniente.size(); j++) {
+                    if (Logica.listaTeniente.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El teniente no puede dar orden a un coronel");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCoronel.size(); j++) {
+                    if (Logica.listaCoronel.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El coronel no puede dar orden a otro coronel");
+                        return;
+                    }
+                }
+
+                for (int j = 0; j < Logica.listaCapitan.size(); j++) {
+                    if (Logica.listaCapitan.get(j).getContSoldado() == jList2.getSelectedIndex() + 1) {
+                        jLabel1.setText("El capitan no puede dar orden a un coronel");
+                        return;
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private DefaultListModel limpiarLista1() {
+        DefaultListModel modelo = new DefaultListModel();
+
+        jList1.setModel(modelo);
+
+        return modelo;
+    }
+
+    private DefaultListModel limpiarLista2() {
+        DefaultListModel modelo = new DefaultListModel();
+
+        jList2.setModel(modelo);
+
+        return modelo;
+    }
+
+    private DefaultListModel agregarValor1(Soldado soldado) {
+        DefaultListModel modelo = (DefaultListModel) jList1.getModel();
+
+        modelo.addElement(soldado.getNombre());
+
+        return modelo;
+    }
+    
+    private DefaultListModel agregarValor2(Soldado soldado) {
+        DefaultListModel modelo = (DefaultListModel) jList2.getModel();
+
+        modelo.addElement(soldado.getNombre());
+
+        return modelo;
+    }
+    
+    private void leerLista() {
+        limpiarLista1();
+        limpiarLista2();
+
+        if (Soldado.getContadorSoldados() > 0) {
+            int a = Logica.listaSoldadoRaso.size() + Logica.listaTeniente.size() + Logica.listaCoronel.size() + Logica.listaCapitan.size();
+            
+            for (int i = 0; i < a; i++) {
+                for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) if (Logica.listaSoldadoRaso.get(j).getContSoldado() == i + 1) agregarValor1(Logica.listaSoldadoRaso.get(j));
+                for (int j = 0; j < Logica.listaTeniente.size(); j++) if (Logica.listaTeniente.get(j).getContSoldado() == i + 1) agregarValor1(Logica.listaTeniente.get(j));
+                for (int j = 0; j < Logica.listaCoronel.size(); j++) if (Logica.listaCoronel.get(j).getContSoldado() == i + 1) agregarValor1(Logica.listaCoronel.get(j));
+                for (int j = 0; j < Logica.listaCapitan.size(); j++) if (Logica.listaCapitan.get(j).getContSoldado() == i + 1) agregarValor1(Logica.listaCapitan.get(j));
+            }
+
+            if (Soldado.getContadorSoldados() - a > 0) {
+                int aux = Soldado.getContadorSoldados() - a;
+                for (int i = 0; i < aux; i++) {
+                    for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) if (Logica.listaSoldadoRaso.get(j).getContSoldado() == a + i + 1) agregarValor1(Logica.listaSoldadoRaso.get(j));
+                    for (int j = 0; j < Logica.listaTeniente.size(); j++) if (Logica.listaTeniente.get(j).getContSoldado() == a + i + 1) agregarValor1(Logica.listaTeniente.get(j));
+                    for (int j = 0; j < Logica.listaCoronel.size(); j++) if (Logica.listaCoronel.get(j).getContSoldado() == a + i + 1) agregarValor1(Logica.listaCoronel.get(j));
+                    for (int j = 0; j < Logica.listaCapitan.size(); j++) if (Logica.listaCapitan.get(j).getContSoldado() == a + i + 1) agregarValor1(Logica.listaCapitan.get(j));
+                }
+            }
+        }
+
+        if (Soldado.getContadorSoldados() > 0) {
+            int a = Logica.listaSoldadoRaso.size() + Logica.listaTeniente.size() + Logica.listaCoronel.size() + Logica.listaCapitan.size();
+            
+            for (int i = 0; i < a; i++) {
+                for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) if (Logica.listaSoldadoRaso.get(j).getContSoldado() == i + 1) agregarValor2(Logica.listaSoldadoRaso.get(j));
+                for (int j = 0; j < Logica.listaTeniente.size(); j++) if (Logica.listaTeniente.get(j).getContSoldado() == i + 1) agregarValor2(Logica.listaTeniente.get(j));
+                for (int j = 0; j < Logica.listaCoronel.size(); j++) if (Logica.listaCoronel.get(j).getContSoldado() == i + 1) agregarValor2(Logica.listaCoronel.get(j));
+                for (int j = 0; j < Logica.listaCapitan.size(); j++) if (Logica.listaCapitan.get(j).getContSoldado() == i + 1) agregarValor2(Logica.listaCapitan.get(j));
+            }
+
+            if (Soldado.getContadorSoldados() - a > 0) {
+                int aux = Soldado.getContadorSoldados() - a;
+                for (int i = 0; i < aux; i++) {
+                    for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) if (Logica.listaSoldadoRaso.get(j).getContSoldado() == a + i + 1) agregarValor2(Logica.listaSoldadoRaso.get(j));
+                    for (int j = 0; j < Logica.listaTeniente.size(); j++) if (Logica.listaTeniente.get(j).getContSoldado() == a + i + 1) agregarValor2(Logica.listaTeniente.get(j));
+                    for (int j = 0; j < Logica.listaCoronel.size(); j++) if (Logica.listaCoronel.get(j).getContSoldado() == a + i + 1) agregarValor2(Logica.listaCoronel.get(j));
+                    for (int j = 0; j < Logica.listaCapitan.size(); j++) if (Logica.listaCapitan.get(j).getContSoldado() == a + i + 1) agregarValor2(Logica.listaCapitan.get(j));
+                }
+            }
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -274,7 +495,6 @@ public class Realizar_Accion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

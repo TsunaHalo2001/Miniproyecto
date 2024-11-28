@@ -10,13 +10,12 @@ public class SoldadoRaso extends Soldado implements Subordinados {
 	}
 
 	@Override
-	public void realizarAccion() {
-		System.out.print("El soldado raso " + nombre + " sigue las ordenes de ");
+	public String realizarAccion() {
+		return "El soldado raso " + nombre + " sigue las ordenes de ";
 	}
 	
-	public void realizarAccion(Soldado superior) {
-		realizarAccion();
-		System.out.println(superior.getNombre());
+	@Override
+	public String realizarAccion(Soldado superior) {
+		return realizarAccion() + superior.getNombre();
 	}
-	
 }
