@@ -56,7 +56,9 @@ public class Menu extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        Lista_Soldados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Lista_Soldados.setToolTipText("");
+        Lista_Soldados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(Lista_Soldados);
 
         Lista_lateral.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -318,7 +320,7 @@ public class Menu extends javax.swing.JFrame {
             DefaultListModel modelo = (DefaultListModel) Lista_Soldados.getModel();
 
             for (int i = 0; i < Logica.listaSoldadoRaso.size(); i++) {
-                if (Logica.listaSoldadoRaso.get(i).getNombre().equals(Lista_Soldados.getSelectedValue())) {
+                if (Logica.listaSoldadoRaso.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
                     Logica.listaSoldadoRaso.remove(i);
                     modelo.remove(Lista_Soldados.getSelectedIndex());
                     return;
@@ -326,7 +328,7 @@ public class Menu extends javax.swing.JFrame {
             }
             
             for (int i = 0; i < Logica.listaTeniente.size(); i++) {
-                if (Logica.listaTeniente.get(i).getNombre().equals(Lista_Soldados.getSelectedValue())) {
+                if (Logica.listaTeniente.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
                     Logica.listaTeniente.remove(i);
                     modelo.remove(Lista_Soldados.getSelectedIndex());
                     return;
@@ -334,7 +336,7 @@ public class Menu extends javax.swing.JFrame {
             }
 
             for (int i = 0; i < Logica.listaCoronel.size(); i++) {
-                if (Logica.listaCoronel.get(i).getNombre().equals(Lista_Soldados.getSelectedValue())) {
+                if (Logica.listaCoronel.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
                     Logica.listaCoronel.remove(i);
                     modelo.remove(Lista_Soldados.getSelectedIndex());
                     return;
@@ -342,7 +344,7 @@ public class Menu extends javax.swing.JFrame {
             }
 
             for (int i = 0; i < Logica.listaCapitan.size(); i++) {
-                if (Logica.listaCapitan.get(i).getNombre().equals(Lista_Soldados.getSelectedValue())) {
+                if (Logica.listaCapitan.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
                     Logica.listaCapitan.remove(i);
                     modelo.remove(Lista_Soldados.getSelectedIndex());
                     return;
@@ -362,7 +364,7 @@ public class Menu extends javax.swing.JFrame {
     private DefaultListModel agregarValor(Soldado soldado) {
         DefaultListModel modelo = (DefaultListModel) Lista_Soldados.getModel();
 
-        modelo.addElement(soldado.getNombre());
+        modelo.addElement(soldado.mostrarInformacion());
 
         return modelo;
     }

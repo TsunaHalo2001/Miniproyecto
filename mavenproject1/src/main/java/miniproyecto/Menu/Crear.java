@@ -678,17 +678,18 @@ public class Crear extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (jTextField5.getText().isEmpty() || jTextField6.getText().isEmpty() || jTextField7.getText().isEmpty()) return;
 
-        Teniente teniente = new Teniente(jTextField5.getText(), jTextField6.getText(), jTextField7.getText());
+        Teniente teniente = new Teniente(jTextField5.getText(), jTextField7.getText(), jTextField6.getText());
 
         Logica.listaTeniente.add(teniente);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
-        if (jTextField11.getText().isEmpty() || jTextField12.getText().isEmpty() || jTextField13.getText().isEmpty() || jTextField14.getText().isEmpty()) return;
+        if (jTextField4.getText().isEmpty() || jTextField8.getText().isEmpty() || jTextField9.getText().isEmpty() || jTextField10.getText().isEmpty()) return;
+        System.out.println(jTextField10.getText());
         if (!Character.isDigit(jTextField10.getText().charAt(0))) return;
 
-        Capitan capitan = new Capitan(jTextField11.getText(), jTextField12.getText(), jTextField13.getText(), Integer.parseInt(jTextField14.getText()));
+        Capitan capitan = new Capitan(jTextField4.getText(), jTextField8.getText(), jTextField9.getText(), Integer.parseInt(jTextField10.getText()));
 
         Logica.listaCapitan.add(capitan);
     }//GEN-LAST:event_jButton4MouseClicked

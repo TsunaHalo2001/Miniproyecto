@@ -24,27 +24,55 @@ public class Soldado extends Rango implements OperacionesMilitares{
         return contadorSoldado;
     }
 	
-	public String[] mostrarInformacion() {
-		String[] info = new String[5];
-		info[0] = "Nombre: " + nombre;
-		info[1] = "ID: " + id;
-		info[2] = "Rango: " + rango;
-		info[3] = "Nivel: " + nivel;
-		info[4] = "Unidad: " + unidad;
+	public String mostrarInformacion() {
+		String info = "<html>" 
+					+ "Nombre: " + this.nombre + "<br>"
+					+ "ID: " 	 + this.id	  + "<br>"
+					+ "Rango: "  + this.rango  + "<br>"
+					+ "Nivel: "  + this.nivel  + "<br>"
+					+ "Unidad: " + this.unidad + "<br>"
+					+ "</html>";
 
 		return info;
 	}
 
 	public String patrullar() {
-		return "El soldado " + nombre + " est? patrullando.";
+		return "El soldado " + this.nombre + " est? patrullando.";
 	}
 
 	public String saludar(Soldado soldado) {
-		return "El soldado " + nombre + " saluda al soldado " + soldado.nombre + ".";
+		if(soldado.getNombre().charAt(0) == this.nombre.charAt(0)) {
+			if(soldado.getNombre().charAt(soldado.getNombre().length()-1) == this.nombre.charAt(this.nombre.length()-1)) {
+				return "Hola " + soldado.getNombre() + ", nuestros nombres son mellizos porque no alcanzaron a ser gemelos.";
+			}
+		}
+		return "Hola " + soldado.getNombre() + ", soy " + this.nombre + ".";
 	}
 
 	public String reganiado (Soldado soldado) {
-		return "El soldado " + nombre + " ha sido reganiado por el soldado " + soldado.nombre + ".";
+		if (this.nivel < soldado.getNivel()) return "El soldado " + this.nombre + " no puede ser reganiado por " + soldado.getNombre();
+		else {
+			this.nivel = this.nivel + 1;
+
+			switch (this.nivel) {
+				case 1:
+					this.rango = RangoEnum.Coronel;
+					break;
+				case 2:
+					this.rango = RangoEnum.Capitan;
+					break;
+				case 3:
+					this.rango = RangoEnum.Teniente;
+					break;
+				case 4:
+					this.rango = RangoEnum.Soldado_Raso;
+					break;
+				default:
+					this.rango = RangoEnum.Soldado_Raso;
+					break;
+			}
+			return "El soldado " + this.nombre + " ha sido reganiado por " + soldado.getNombre() + " y ahora es " + this.rango;
+		}
 	}
 
 	@Override
@@ -53,7 +81,7 @@ public class Soldado extends Rango implements OperacionesMilitares{
 	}
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String nombre) {
@@ -61,11 +89,11 @@ public class Soldado extends Rango implements OperacionesMilitares{
 	}
 
 	public String getId() {
-		return id;
+		return this.id;
 	}
 
 	public String getRango() {
-		return rango.toString();
+		return this.rango.toString();
 	}
 
 	public void setRango(RangoEnum rango) {
@@ -90,11 +118,11 @@ public class Soldado extends Rango implements OperacionesMilitares{
 	}
 
 	public int getNivel() {
-		return nivel;
+		return this.nivel;
 	}
 
 	public String getUnidad() {
-		return unidad;
+		return this.unidad;
 	}
 
 	public void setUnidad(String unidad) {
@@ -102,7 +130,7 @@ public class Soldado extends Rango implements OperacionesMilitares{
 	}
 
 	public int getContSoldado() {
-		return contSoldado;
+		return this.contSoldado;
 	}
 
 	public void setContSoldado(int contSoldado) {

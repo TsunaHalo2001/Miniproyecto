@@ -13,7 +13,7 @@ public class Capitan extends Soldado implements Subordinados {
 
 	@Override
 	public String realizarAccion() {
-		return "El capitan " + nombre + " sigue las ordenes de ";
+		return "<br>El capitan " + nombre + " sigue las ordenes de ";
 	}
 
 	@Override
@@ -21,13 +21,18 @@ public class Capitan extends Soldado implements Subordinados {
 		return realizarAccion() + superior.getNombre();
 	}
 
+	@Override
+	public String patrullar() {
+		return "El capitan " + nombre + " est? liderando la patrulla.";
+	}
+
 	public String darOrden(SoldadoRaso subordinado) {
-		if (subordinado.getUnidad().equals(unidad)) return "El capitan " + nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this);
+		if (subordinado.getUnidad().equals(unidad)) return "<html>El capitan " + nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this) + "</html>";
 		else return "El capitan " + nombre + " no tiene autoridad sobre el soldado raso " + subordinado.getNombre();
 	}
 
 	public String darOrden(Teniente subordinado) {
-		if (subordinado.getUnidad().equals(unidad)) return "El capitan " + nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this);
+		if (subordinado.getUnidad().equals(unidad)) return "<html>El capitan " + nombre + " da la orden a " + subordinado.getNombre() + subordinado.realizarAccion(this) + "</html>";
 		else return "El capitan " + nombre + " no tiene autoridad sobre el teniente " + subordinado.getNombre(); 
 	}
 
