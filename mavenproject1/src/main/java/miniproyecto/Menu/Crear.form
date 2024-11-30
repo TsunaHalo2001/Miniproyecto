@@ -74,9 +74,9 @@
                               <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="Soldado_Boton" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="Teniente_Boton" pref="113" max="32767" attributes="0"/>
-                                  <Component id="Capitan_Boton" pref="113" max="32767" attributes="0"/>
-                                  <Component id="Coronel_Boton" pref="113" max="32767" attributes="0"/>
+                                  <Component id="Teniente_Boton" max="32767" attributes="0"/>
+                                  <Component id="Capitan_Boton" max="32767" attributes="0"/>
+                                  <Component id="Coronel_Boton" max="32767" attributes="0"/>
                                   <Component id="Volver_boton" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -85,7 +85,7 @@
                               <Component id="Texto" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="64" max="32767" attributes="0"/>
+                      <EmptySpace pref="57" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -121,7 +121,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Soldado "/>
+                <Property name="text" type="java.lang.String" value="Soldado Raso"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Soldado_BotonActionPerformed"/>
@@ -289,7 +289,7 @@
                                   <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jTextField1" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
@@ -385,6 +385,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Guardar"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseClicked"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel1">
                       <Properties>
@@ -566,6 +569,7 @@
                         <Property name="text" type="java.lang.String" value="Guardar"/>
                       </Properties>
                       <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton3MouseClicked"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
                       </Events>
                     </Component>
@@ -758,6 +762,7 @@
                         <Property name="text" type="java.lang.String" value="Guardar"/>
                       </Properties>
                       <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton4MouseClicked"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
                       </Events>
                     </Component>
@@ -944,6 +949,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Guardar"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton5MouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

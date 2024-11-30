@@ -7,11 +7,15 @@ import miniproyecto.Soldados.Coronel;
 import miniproyecto.Soldados.Capitan;
 import miniproyecto.Soldados.Teniente;
 import miniproyecto.Soldados.SoldadoRaso;
+import miniproyecto.Menu.Menu;
 
 public class App {
     public static void main(String[] args) {
-        Scanner opcion = new Scanner(System.in);
-        ArrayList<Soldado> listaSoldados = new ArrayList<>(); 
+        
+        Menu mainMenu = new Menu();
+        
+        mainMenu.setVisible(true);
+        /*Scanner opcion = new Scanner(System.in); 
         
         while (true) {
             System.out.println("Bienvenido al sistema de gestion militar, seleccione una opcion: ");
@@ -222,7 +226,7 @@ public class App {
                     System.out.println("Opcion ingresada no valida, vuelva a intentar.");
                     break;
             }
-        }
+        }*/
     }
 }
 

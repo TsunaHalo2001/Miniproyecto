@@ -1,5 +1,13 @@
 package miniproyecto.Menu;
 
+
+import miniproyecto.Soldados.SoldadoRaso;
+import miniproyecto.Soldados.Teniente;
+import miniproyecto.Soldados.Capitan;
+import miniproyecto.Soldados.Coronel;
+
+import miniproyecto.app.Logica;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -87,7 +95,7 @@ public class Crear extends javax.swing.JFrame {
         Soldado_Boton.setBackground(new java.awt.Color(51, 51, 51));
         Soldado_Boton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Soldado_Boton.setForeground(new java.awt.Color(255, 255, 255));
-        Soldado_Boton.setText("Soldado ");
+        Soldado_Boton.setText("Soldado Raso");
         Soldado_Boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Soldado_BotonActionPerformed(evt);
@@ -154,14 +162,14 @@ public class Crear extends javax.swing.JFrame {
                         .addGap(53, 53, 53)
                         .addGroup(Panel_botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Soldado_Boton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Teniente_Boton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                            .addComponent(Capitan_Boton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                            .addComponent(Coronel_Boton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                            .addComponent(Teniente_Boton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Capitan_Boton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Coronel_Boton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Volver_boton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(Panel_botonesLayout.createSequentialGroup()
                         .addGap(63, 63, 63)
                         .addComponent(Texto)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         Panel_botonesLayout.setVerticalGroup(
             Panel_botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,6 +231,11 @@ public class Crear extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Guardar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
@@ -248,7 +261,7 @@ public class Crear extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                     .addComponent(jTextField3)
                     .addComponent(jTextField1))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Soldado_raso_crearLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -302,6 +315,11 @@ public class Crear extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(51, 51, 51));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Guardar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -393,6 +411,11 @@ public class Crear extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Guardar");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -497,6 +520,11 @@ public class Crear extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Guardar");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Capitan_crearLayout = new javax.swing.GroupLayout(Capitan_crear);
         Capitan_crear.setLayout(Capitan_crearLayout);
@@ -560,7 +588,7 @@ public class Crear extends javax.swing.JFrame {
             Panel_IngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_IngresoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Multi_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
+                .addComponent(Multi_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 498, Short.MAX_VALUE)
                 .addContainerGap())
         );
         Panel_IngresoLayout.setVerticalGroup(
@@ -636,6 +664,44 @@ public class Crear extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        if (jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty()) return;
+
+        SoldadoRaso soldado = new SoldadoRaso(jTextField1.getText(), jTextField2.getText(), jTextField3.getText());
+
+        Logica.listaSoldadoRaso.add(soldado);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        if (jTextField5.getText().isEmpty() || jTextField6.getText().isEmpty() || jTextField7.getText().isEmpty()) return;
+
+        Teniente teniente = new Teniente(jTextField5.getText(), jTextField7.getText(), jTextField6.getText());
+
+        Logica.listaTeniente.add(teniente);
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        if (jTextField4.getText().isEmpty() || jTextField8.getText().isEmpty() || jTextField9.getText().isEmpty() || jTextField10.getText().isEmpty()) return;
+        System.out.println(jTextField10.getText());
+        if (!Character.isDigit(jTextField10.getText().charAt(0))) return;
+
+        Capitan capitan = new Capitan(jTextField4.getText(), jTextField8.getText(), jTextField9.getText(), Integer.parseInt(jTextField10.getText()));
+
+        Logica.listaCapitan.add(capitan);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        if (jTextField11.getText().isEmpty() || jTextField12.getText().isEmpty() || jTextField13.getText().isEmpty() || jTextField14.getText().isEmpty()) return;
+
+        Coronel coronel = new Coronel(jTextField11.getText(), jTextField12.getText(), jTextField13.getText(), jTextField14.getText());
+
+        Logica.listaCoronel.add(coronel);
+    }//GEN-LAST:event_jButton5MouseClicked
 
 
 
