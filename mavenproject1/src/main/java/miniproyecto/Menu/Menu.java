@@ -37,7 +37,6 @@ public class Menu extends javax.swing.JFrame {
         Panel_Datos = new javax.swing.JPanel();
         Boton_Crear = new javax.swing.JButton();
         Boton_Actualizar = new javax.swing.JButton();
-        Img_Menu = new javax.swing.JLabel();
         Bienvenida = new javax.swing.JLabel();
         Boton_Visualizar1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -56,18 +55,18 @@ public class Menu extends javax.swing.JFrame {
         Lista_Soldados.setBorder(null);
         Lista_Soldados.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         Lista_Soldados.setForeground(new java.awt.Color(0, 0, 0));
+        Lista_Soldados.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "a", "b" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         Lista_Soldados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Lista_Soldados.setToolTipText("");
         Lista_Soldados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Lista_Soldados.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 Lista_SoldadosValueChanged(evt);
-                            }
-                
-                            private void Lista_SoldadosValueChanged(ListSelectionEvent evt) {
-                                // TODO Auto-generated method stub
-                                throw new UnsupportedOperationException("Unimplemented method 'Lista_SoldadosValueChanged'");
-                            }
+            }
         });
         jScrollPane1.setViewportView(Lista_Soldados);
 
@@ -95,7 +94,7 @@ public class Menu extends javax.swing.JFrame {
         Resetear.setBackground(new java.awt.Color(26, 26, 25));
         Resetear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Resetear.setForeground(new java.awt.Color(255, 255, 255));
-        Resetear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniproyecto/Img/reiniciar (1).png"))); // NOI18N
+        Resetear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniproyecto/Img/Re.png"))); // NOI18N
         Resetear.setBorder(null);
         Resetear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -179,9 +178,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        Img_Menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Img_Menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniproyecto/Img/puede servir 2.jpg"))); // NOI18N
-
         Bienvenida.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         Bienvenida.setForeground(new java.awt.Color(0, 0, 0));
         Bienvenida.setText("Bienvenido al sistema de gestion militar");
@@ -221,12 +217,8 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(82, 82, 82)
                         .addComponent(Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(10, Short.MAX_VALUE))
-            .addGroup(Panel_DatosLayout.createSequentialGroup()
-                .addGap(484, 484, 484)
-                .addComponent(Img_Menu)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_DatosLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(128, 128, 128))
         );
@@ -242,9 +234,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(Boton_Visualizar1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(12, 12, 12)
-                .addComponent(Img_Menu)
-                .addGap(62, 62, 62))
+                .addGap(74, 74, 74))
         );
 
         Bg_1.add(Panel_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 510, 410));
@@ -383,13 +373,13 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    ImageIcon img = new ImageIcon(getClass().getResource("/miniproyecto/Img/1.jpg"));
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 
     }
 
-
+    private void Lista_SoldadosValueChanged(javax.swing.event.ListSelectionEvent evt) {                                    
+        // TODO add your handling code here:
+    }      
 
     private DefaultListModel limpiarLista() {
         DefaultListModel modelo = new DefaultListModel();
@@ -438,7 +428,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton Boton_Actualizar;
     private javax.swing.JButton Boton_Crear;
     private javax.swing.JButton Boton_Visualizar1;
-    private javax.swing.JLabel Img_Menu;
     private javax.swing.JList<String> Lista_Soldados;
     private javax.swing.JLabel Lista_lateral;
     private javax.swing.JPanel Panel_Datos;

@@ -19,7 +19,7 @@ public class App {
         
         while (true) {
             System.out.println("Bienvenido al sistema de gestion militar, seleccione una opcion: ");
-            String menu = " 1.-Crear \n 2.-Visualizar \n 3.-Modificar \n 4.-Realizar acción \n 5.-Salir";
+            String menu = " 1.-Crear \n 2.-Visualizar \n 3.-Modificar \n 4.-Realizar acciط£آ³n \n 5.-Salir";
             System.out.println("--------------------");
             System.out.println(menu);
             System.out.println("--------------------");
@@ -56,7 +56,7 @@ public class App {
                                 System.out.print("Ingrese una estrategia a seguir: ");
                                 String estrategiaPlaneada = opcion.nextLine();
                                 listaSoldados.add(new Coronel(nombreCoronel, idCoronel, unidad, estrategiaPlaneada));
-                                System.out.println("Coronel agregado con éxito.");
+                                System.out.println("Coronel agregado con ط£آ©xito.");
                             } else {
                                 System.out.println("No se ha agregado el Coronel debido a un ID duplicado.");
                             }
@@ -81,7 +81,7 @@ public class App {
                                 System.out.print("Ingrese el numero de soldados bajo su mando: ");
                                 int soldadosBajoMando = Integer.parseInt(opcion.nextLine());
                                 listaSoldados.add(new Capitan(nombreCapitan, idCapitan, unidadCapitan, soldadosBajoMando));
-                                System.out.println("Coronel agregado con éxito.");
+                                System.out.println("Coronel agregado con ط£آ©xito.");
                             } else {
                                 System.out.println("No se ha agregado el Capitan debido a un ID duplicado.");
                             }
@@ -104,7 +104,7 @@ public class App {
                                 System.out.print("Ingrese la unidad a la que pertenece: ");
                                 String unidadTeniente = opcion.nextLine();
                                 listaSoldados.add(new Teniente(nombreTeniente, idTeniente, unidadTeniente));
-                                System.out.println("Coronel agregado con éxito.");
+                                System.out.println("Coronel agregado con ط£آ©xito.");
                             } else {
                                 System.out.println("No se ha agregado el Teniente debido a un ID duplicado.");
                             }
@@ -128,7 +128,7 @@ public class App {
                                     System.out.print("Ingrese la unidad a la que pertenece: ");
                                     String unidadRaso = opcion.nextLine();
                                     listaSoldados.add(new SoldadoRaso(nombreSoldado, idSoldado, unidadRaso));
-                                    System.out.println("Coronel agregado con éxito.");
+                                    System.out.println("Coronel agregado con ط£آ©xito.");
                                 } else {
                                     System.out.println("No se ha agregado el Soldado raso debido a un ID duplicado.");
                                 }
@@ -157,7 +157,7 @@ public class App {
                             System.out.print("Ingrese el nuevo nombre: ");
                             String nuevoNombre = opcion.nextLine();
                             soldado.setNombre(nuevoNombre);
-                            System.out.println("Soldado modificado con éxito.");
+                            System.out.println("Soldado modificado con ط£آ©xito.");
 
                             switch (soldado.getRango()) {
                                 case "Teniente":
@@ -183,7 +183,7 @@ public class App {
                     break;
 
                 case "4":
-                    System.out.println("Seleccione el tipo de acción que desea realizar: ");
+                    System.out.println("Seleccione el tipo de acciط£آ³n que desea realizar: ");
                     String accion = "1.-Dar orden";
                     System.out.println("--------------------");
                     System.out.println(accion);
@@ -206,7 +206,7 @@ public class App {
                                         } else if (superior instanceof Teniente && subordinado instanceof SoldadoRaso) {
                                             ((Teniente) superior).realizarAccion((SoldadoRaso) subordinado);
                                         } else {
-                                            System.out.println("El subordinado no tiene un rango inferior adecuado para recibir órdenes.");
+                                            System.out.println("El subordinado no tiene un rango inferior adecuado para recibir ط£آ³rdenes.");
                                         }
 
                                     }
