@@ -1,20 +1,12 @@
 package miniproyecto.app;
 
-import java.util.Scanner;
-import java.util.ArrayList;
-import miniproyecto.Soldados.Soldado;
-import miniproyecto.Soldados.Coronel;
-import miniproyecto.Soldados.Capitan;
-import miniproyecto.Soldados.Teniente;
-import miniproyecto.Soldados.SoldadoRaso;
-import miniproyecto.Menu.Menu;
-
 public class App {
     public static void main(String[] args) {
         
-        Menu mainMenu = new Menu();
-        
-        mainMenu.setVisible(true);
+        Modelo modelo = new Modelo();
+        Vista vista = new Vista();
+
+        Controlador controlador = new Controlador(modelo, vista);
         /*Scanner opcion = new Scanner(System.in); 
         
         while (true) {

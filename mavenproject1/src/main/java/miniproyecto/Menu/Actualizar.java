@@ -7,7 +7,7 @@ package miniproyecto.Menu;
 import miniproyecto.Soldados.Capitan;
 import miniproyecto.Soldados.Coronel;
 import miniproyecto.Soldados.Soldado;
-import miniproyecto.app.Logica;
+import miniproyecto.app.Modelo;
 import miniproyecto.Soldados.SoldadoRaso;
 import miniproyecto.Soldados.Teniente;
 
@@ -16,7 +16,6 @@ import miniproyecto.Soldados.Teniente;
  * @author user
  */
 public class Actualizar extends javax.swing.JFrame {
-    public int index;
     /**
      * Creates new form Actualizar
      */
@@ -573,50 +572,7 @@ public class Actualizar extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-        if (jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty()) return;
-
-        SoldadoRaso soldado = new SoldadoRaso(jTextField1.getText(), jTextField2.getText(), jTextField3.getText());
-        Soldado.setContSoldiers(Soldado.getContadorSoldados() - 1);
-        soldado.setContSoldado(this.index + 1);
-
-        if (!Logica.listaSoldadoRaso.isEmpty()) {
-            for (int i = 0; i < Logica.listaSoldadoRaso.size(); i++) {
-                if (Logica.listaSoldadoRaso.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaSoldadoRaso.set(i, soldado);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaTeniente.isEmpty()) {
-            for (int i = 0; i < Logica.listaTeniente.size(); i++) {
-                if (Logica.listaTeniente.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaTeniente.remove(i);
-                    Logica.listaSoldadoRaso.add(soldado);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaCapitan.isEmpty()) {
-            for (int i = 0; i < Logica.listaCapitan.size(); i++) {
-                if (Logica.listaCapitan.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCapitan.remove(i);
-                    Logica.listaSoldadoRaso.add(soldado);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaCoronel.isEmpty()) {
-            for (int i = 0; i < Logica.listaCoronel.size(); i++) {
-                if (Logica.listaCoronel.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCoronel.remove(i);
-                    Logica.listaSoldadoRaso.add(soldado);
-                    break;
-                }
-            }
-        }
+        modelo.actualizarRaso(jTextField1, jTextField2, jTextField3);
 
         Menu men = new Menu();
         men.setVisible(true);
@@ -625,48 +581,8 @@ public class Actualizar extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
-        if (jTextField5.getText().isEmpty() || jTextField6.getText().isEmpty() || jTextField7.getText().isEmpty()) return;
-        Teniente teniente = new Teniente(jTextField5.getText(), jTextField7.getText(), jTextField6.getText());
-        Soldado.setContSoldiers(Soldado.getContadorSoldados() - 1);
-        teniente.setContSoldado(this.index + 1);
-        if (!Logica.listaTeniente.isEmpty()) {
-            for (int i = 0; i < Logica.listaTeniente.size(); i++) {
-                if (Logica.listaTeniente.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaTeniente.set(i, teniente);
-                    break;
-                }
-            }
-        }
+        modelo.actualizarTeniente(jTextField5, jTextField7, jTextField6);
 
-        if (!Logica.listaSoldadoRaso.isEmpty()) {
-            for (int i = 0; i < Logica.listaSoldadoRaso.size(); i++) {
-                if (Logica.listaSoldadoRaso.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaSoldadoRaso.remove(i);
-                    Logica.listaTeniente.add(teniente);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaCapitan.isEmpty()) {
-            for (int i = 0; i < Logica.listaCapitan.size(); i++) {
-                if (Logica.listaCapitan.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCapitan.remove(i);
-                    Logica.listaTeniente.add(teniente);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaCoronel.isEmpty()) {
-            for (int i = 0; i < Logica.listaCoronel.size(); i++) {
-                if (Logica.listaCoronel.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCoronel.remove(i);
-                    Logica.listaTeniente.add(teniente);
-                    break;
-                }
-            }
-        }
         Menu men = new Menu();
         men.setVisible(true);
         dispose();
@@ -678,52 +594,7 @@ public class Actualizar extends javax.swing.JFrame {
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
-        if (jTextField4.getText().isEmpty() || jTextField8.getText().isEmpty() || jTextField9.getText().isEmpty() || jTextField10.getText().isEmpty()) return;
-        if (!Character.isDigit(jTextField10.getText().charAt(0))) return;
-
-        Capitan capitan = new Capitan(jTextField4.getText(), jTextField8.getText(), jTextField9.getText(), Integer.parseInt(jTextField10.getText()));
-
-        Soldado.setContSoldiers(Soldado.getContadorSoldados() - 1);
-        capitan.setContSoldado(this.index + 1);
-
-        if (!Logica.listaCapitan.isEmpty()) {
-            for (int i = 0; i < Logica.listaCapitan.size(); i++) {
-                if (Logica.listaCapitan.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCapitan.set(i, capitan);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaSoldadoRaso.isEmpty()) {
-            for (int i = 0; i < Logica.listaSoldadoRaso.size(); i++) {
-                if (Logica.listaSoldadoRaso.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaSoldadoRaso.remove(i);
-                    Logica.listaCapitan.add(capitan);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaTeniente.isEmpty()) {
-            for (int i = 0; i < Logica.listaTeniente.size(); i++) {
-                if (Logica.listaTeniente.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaTeniente.remove(i);
-                    Logica.listaCapitan.add(capitan);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaCoronel.isEmpty()) {
-            for (int i = 0; i < Logica.listaCoronel.size(); i++) {
-                if (Logica.listaCoronel.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCoronel.remove(i);
-                    Logica.listaCapitan.add(capitan);
-                    break;
-                }
-            }
-        }
+        modelo.actualizarCapitan(jTextField4, jTextField8, jTextField9, jTextField10);
 
         Menu men = new Menu();
         men.setVisible(true);
@@ -739,53 +610,8 @@ public class Actualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField11ActionPerformed
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        // TODO add your handling code here:
-        if (jTextField11.getText().isEmpty() || jTextField12.getText().isEmpty() || jTextField13.getText().isEmpty() || jTextField14.getText().isEmpty()) return;
-
-        Coronel coronel = new Coronel(jTextField11.getText(), jTextField12.getText(), jTextField13.getText(), jTextField14.getText());
-
-        Soldado.setContSoldiers(Soldado.getContadorSoldados() - 1);
-        coronel.setContSoldado(this.index + 1);
-
-        if (!Logica.listaCoronel.isEmpty()) {
-            for (int i = 0; i < Logica.listaCoronel.size(); i++) {
-                if (Logica.listaCoronel.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCoronel.set(i, coronel);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaSoldadoRaso.isEmpty()) {
-            for (int i = 0; i < Logica.listaSoldadoRaso.size(); i++) {
-                if (Logica.listaSoldadoRaso.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaSoldadoRaso.remove(i);
-                    Logica.listaCoronel.add(coronel);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaTeniente.isEmpty()) {
-            for (int i = 0; i < Logica.listaTeniente.size(); i++) {
-                if (Logica.listaTeniente.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaTeniente.remove(i);
-                    Logica.listaCoronel.add(coronel);
-                    break;
-                }
-            }
-        }
-
-        if (!Logica.listaCapitan.isEmpty()) {
-            for (int i = 0; i < Logica.listaCapitan.size(); i++) {
-                if (Logica.listaCapitan.get(i).getContSoldado() == this.index + 1) {
-                    Logica.listaCapitan.remove(i);
-                    Logica.listaCoronel.add(coronel);
-                    break;
-                }
-            }
-
-        }
+        // TODO add your handling code here
+        modelo.actualizarCoronel(jTextField11, jTextField12, jTextField13, jTextField14);
 
         Menu men = new Menu();
         men.setVisible(true);

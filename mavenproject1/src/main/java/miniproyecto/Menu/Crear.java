@@ -6,7 +6,7 @@ import miniproyecto.Soldados.Teniente;
 import miniproyecto.Soldados.Capitan;
 import miniproyecto.Soldados.Coronel;
 
-import miniproyecto.app.Logica;
+import miniproyecto.app.Modelo;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -673,39 +673,22 @@ public class Crear extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-        if (jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty()) return;
-
-        SoldadoRaso soldado = new SoldadoRaso(jTextField1.getText(), jTextField2.getText(), jTextField3.getText());
-
-        Logica.listaSoldadoRaso.add(soldado);
+        modelo.crearRaso(jTextField1, jTextField2, jTextField3);
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
-        if (jTextField5.getText().isEmpty() || jTextField6.getText().isEmpty() || jTextField7.getText().isEmpty()) return;
-
-        Teniente teniente = new Teniente(jTextField5.getText(), jTextField7.getText(), jTextField6.getText());
-
-        Logica.listaTeniente.add(teniente);
+        modelo.crearTeniente(jTextField4, jTextField6, jTextField5);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
-        if (jTextField4.getText().isEmpty() || jTextField8.getText().isEmpty() || jTextField9.getText().isEmpty() || jTextField10.getText().isEmpty()) return;
-        if (!Character.isDigit(jTextField10.getText().charAt(0))) return;
-
-        Capitan capitan = new Capitan(jTextField4.getText(), jTextField8.getText(), jTextField9.getText(), Integer.parseInt(jTextField10.getText()));
-
-        Logica.listaCapitan.add(capitan);
+        modelo.crearCapitan(jTextField4, jTextField8, jTextField9, jTextField10);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         // TODO add your handling code here:
-        if (jTextField11.getText().isEmpty() || jTextField12.getText().isEmpty() || jTextField13.getText().isEmpty() || jTextField14.getText().isEmpty()) return;
-
-        Coronel coronel = new Coronel(jTextField11.getText(), jTextField12.getText(), jTextField13.getText(), jTextField14.getText());
-
-        Logica.listaCoronel.add(coronel);
+        modelo.crearCoronel(jTextField11, jTextField12, jTextField13, jTextField14);
     }//GEN-LAST:event_jButton5MouseClicked
 
 

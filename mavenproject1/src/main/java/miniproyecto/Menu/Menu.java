@@ -13,13 +13,13 @@ import miniproyecto.Soldados.SoldadoRaso;
 import miniproyecto.Soldados.Teniente;
 import miniproyecto.Soldados.Coronel;
 import miniproyecto.Soldados.Capitan;
-import miniproyecto.app.Logica;
+import miniproyecto.app.Modelo;
 
 public class Menu extends javax.swing.JFrame {
 
     public Menu() {
         initComponents();
-        leerLista();
+        modelo.leerLista(Lista_Soldados);
     }
 
 
@@ -306,7 +306,7 @@ public class Menu extends javax.swing.JFrame {
     private void Boton_ActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_ActualizarMouseClicked
         if (Lista_Soldados.getSelectedIndex() != -1) {
             Actualizar Act = new Actualizar();
-            Act.index = Lista_Soldados.getSelectedIndex();
+            modelo.index = Lista_Soldados.getSelectedIndex();
             Act.setVisible(true);
 
             dispose();
@@ -315,58 +315,19 @@ public class Menu extends javax.swing.JFrame {
 
     private void Boton_Visualizar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Visualizar1MouseClicked
         Realizar_Accion Realizar = new Realizar_Accion();
+
         Realizar.setVisible(true);
         dispose();
     }//GEN-LAST:event_Boton_Visualizar1MouseClicked
 
     private void ResetearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResetearMouseClicked
         // TODO add your handling code here:
-        limpiarLista();
-
-        Soldado.resetear();
-        Logica.listaSoldadoRaso.clear();
-        Logica.listaTeniente.clear();
-        Logica.listaCoronel.clear();
-        Logica.listaCapitan.clear();
+        modelo.resetearLista(Lista_Soldados);
     }//GEN-LAST:event_ResetearMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        if (Lista_Soldados.getModel().getSize() > 0) {
-            DefaultListModel modelo = (DefaultListModel) Lista_Soldados.getModel();
-
-            for (int i = 0; i < Logica.listaSoldadoRaso.size(); i++) {
-                if (Logica.listaSoldadoRaso.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
-                    Logica.listaSoldadoRaso.remove(i);
-                    modelo.remove(Lista_Soldados.getSelectedIndex());
-                    return;
-                }
-            }
-            
-            for (int i = 0; i < Logica.listaTeniente.size(); i++) {
-                if (Logica.listaTeniente.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
-                    Logica.listaTeniente.remove(i);
-                    modelo.remove(Lista_Soldados.getSelectedIndex());
-                    return;
-                }
-            }
-
-            for (int i = 0; i < Logica.listaCoronel.size(); i++) {
-                if (Logica.listaCoronel.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
-                    Logica.listaCoronel.remove(i);
-                    modelo.remove(Lista_Soldados.getSelectedIndex());
-                    return;
-                }
-            }
-
-            for (int i = 0; i < Logica.listaCapitan.size(); i++) {
-                if (Logica.listaCapitan.get(i).mostrarInformacion().equals(Lista_Soldados.getSelectedValue())) {
-                    Logica.listaCapitan.remove(i);
-                    modelo.remove(Lista_Soldados.getSelectedIndex());
-                    return;
-                }
-            }
-        }
+        modelo.eliminardeLista(Lista_Soldados);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -379,47 +340,6 @@ public class Menu extends javax.swing.JFrame {
 
     private void Lista_SoldadosValueChanged(javax.swing.event.ListSelectionEvent evt) {                                    
         // TODO add your handling code here:
-    }      
-
-    private DefaultListModel limpiarLista() {
-        DefaultListModel modelo = new DefaultListModel();
-
-        Lista_Soldados.setModel(modelo);
-
-        return modelo;
-    }
-
-    private DefaultListModel agregarValor(Soldado soldado) {
-        DefaultListModel modelo = (DefaultListModel) Lista_Soldados.getModel();
-
-        modelo.addElement(soldado.mostrarInformacion());
-
-        return modelo;
-    }
-
-    private void leerLista() {
-        limpiarLista();
-
-        if (Soldado.getContadorSoldados() > 0) {
-            int a = Logica.listaSoldadoRaso.size() + Logica.listaTeniente.size() + Logica.listaCoronel.size() + Logica.listaCapitan.size();
-            
-            for (int i = 0; i < a; i++) {
-                for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) if (Logica.listaSoldadoRaso.get(j).getContSoldado() == i + 1) agregarValor(Logica.listaSoldadoRaso.get(j));
-                for (int j = 0; j < Logica.listaTeniente.size(); j++) if (Logica.listaTeniente.get(j).getContSoldado() == i + 1) agregarValor(Logica.listaTeniente.get(j));
-                for (int j = 0; j < Logica.listaCoronel.size(); j++) if (Logica.listaCoronel.get(j).getContSoldado() == i + 1) agregarValor(Logica.listaCoronel.get(j));
-                for (int j = 0; j < Logica.listaCapitan.size(); j++) if (Logica.listaCapitan.get(j).getContSoldado() == i + 1) agregarValor(Logica.listaCapitan.get(j));
-            }
-
-            if (Soldado.getContadorSoldados() - a > 0) {
-                int aux = Soldado.getContadorSoldados() - a;
-                for (int i = 0; i < aux; i++) {
-                    for (int j = 0; j < Logica.listaSoldadoRaso.size(); j++) if (Logica.listaSoldadoRaso.get(j).getContSoldado() == a + i + 1) agregarValor(Logica.listaSoldadoRaso.get(j));
-                    for (int j = 0; j < Logica.listaTeniente.size(); j++) if (Logica.listaTeniente.get(j).getContSoldado() == a + i + 1) agregarValor(Logica.listaTeniente.get(j));
-                    for (int j = 0; j < Logica.listaCoronel.size(); j++) if (Logica.listaCoronel.get(j).getContSoldado() == a + i + 1) agregarValor(Logica.listaCoronel.get(j));
-                    for (int j = 0; j < Logica.listaCapitan.size(); j++) if (Logica.listaCapitan.get(j).getContSoldado() == a + i + 1) agregarValor(Logica.listaCapitan.get(j));
-                }
-            }
-        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
