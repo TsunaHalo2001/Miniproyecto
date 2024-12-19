@@ -78,7 +78,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="112" max="-2" attributes="0"/>
+                      <Component id="Boton_Eliminar" min="-2" pref="112" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="Resetear" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -94,7 +94,7 @@
                       <Component id="jScrollPane1" min="-2" pref="383" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton1" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="Boton_Eliminar" min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="Resetear" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -157,7 +157,7 @@
                 <Property name="text" type="java.lang.String" value="Lista"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="Boton_Eliminar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f" green="f" red="f" type="rgb"/>
@@ -173,10 +173,6 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Resetear">
               <Properties>
@@ -196,10 +192,6 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ResetearMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResetearActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -226,7 +218,7 @@
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="Boton_Actualizar" min="-2" pref="150" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="Boton_Visualizar1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="Boton_RealizarAccion" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
@@ -251,7 +243,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Boton_Crear" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="Boton_Actualizar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="Boton_Visualizar1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="Boton_RealizarAccion" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="59" max="32767" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -277,10 +269,6 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Boton_CrearMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_CrearActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Boton_Actualizar">
               <Properties>
@@ -298,10 +286,6 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Boton_ActualizarMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_ActualizarActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Bienvenida">
               <Properties>
@@ -314,7 +298,7 @@
                 <Property name="text" type="java.lang.String" value="Bienvenido al sistema de gestion militar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="Boton_Visualizar1">
+            <Component class="javax.swing.JButton" name="Boton_RealizarAccion">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f" green="f" red="f" type="rgb"/>
@@ -330,10 +314,6 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Boton_Visualizar1MouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_Visualizar1ActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>

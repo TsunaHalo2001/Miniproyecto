@@ -7,153 +7,153 @@ public class Controlador {
 	public Controlador(Vista v, Modelo m) {
 		this.vista = v;
 		this.modelo = m;
-        this.modelo.leerLista(this.vista.menu.Lista_Soldados);
+        this.modelo.leerLista(this.vista.menu.getLista_Soldados());
 	
-		this.vista.menu.Boton_Crear.addMouseListener(new java.awt.event.MouseAdapter() {
+		this.vista.menu.getBoton_Crear().addMouseListener(new java.awt.event.MouseAdapter() {
 			@Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 				vista.crear();
 			}
 		});
 
-        this.vista.menu.Boton_Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.menu.getBoton_Actualizar().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-                if (vista.menu.Lista_Soldados.getSelectedIndex() != -1) {
-					modelo.index = vista.menu.Lista_Soldados.getSelectedIndex();
+                if (vista.menu.getLista_Soldados().getSelectedIndex() != -1) {
+					modelo.index = vista.menu.getLista_Soldados().getSelectedIndex();
 					vista.actualizar();
 				}
             }
         });
 
-        this.vista.menu.Resetear.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.menu.getResetear().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-                modelo.resetearLista(vista.menu.Lista_Soldados);
+                modelo.resetearLista(vista.menu.getLista_Soldados());
             }
         });
 
-        this.vista.menu.Boton_Visualizar1.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.menu.getBoton_RealizarAccion().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
                 vista.realizarAccion();
-				modelo.leerLista(vista.realizarAccion.jList1);
-				modelo.leerLista(vista.realizarAccion.jList2);
+				modelo.leerLista(vista.realizarAccion.getSubordinado());
+				modelo.leerLista(vista.realizarAccion.getSuperior());
             }
         });
 		
-        this.vista.menu.jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.menu.getBoton_Eliminar().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.eliminardeLista(vista.menu.Lista_Soldados);
+        		modelo.eliminardeLista(vista.menu.getLista_Soldados());
             }
         });
 
-        this.vista.crear.Volver_boton.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.crear.getVolver_boton().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
                 vista.menuC();
-				modelo.leerLista(vista.menu.Lista_Soldados);
+				modelo.leerLista(vista.menu.getLista_Soldados());
             }
         });
 
-        this.vista.crear.jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.crear.getGuardarR().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-                modelo.crearRaso(vista.crear.jTextField1, vista.crear.jTextField2, vista.crear.jTextField3);
+                modelo.crearRaso(vista.crear.getNombreR(), vista.crear.getCodigoR(), vista.crear.getUnidadR());
             }
         });
 
-        this.vista.crear.jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.crear.getGuardarT().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.crearTeniente(vista.crear.jTextField5, vista.crear.jTextField7, vista.crear.jTextField6);
+        		modelo.crearTeniente(vista.crear.getNombreT(), vista.crear.getCodigoT(), vista.crear.getUnidadT());
             }
         });
 
-        this.vista.crear.jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.crear.getGuardarCa().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-                modelo.crearCapitan(vista.crear.jTextField4, vista.crear.jTextField8, vista.crear.jTextField9, vista.crear.jTextField10);
+                modelo.crearCapitan(vista.crear.getNombreCa(), vista.crear.getCodigoCa(), vista.crear.getUnidadCa(), vista.crear.getUnidadesCa());
             }
         });
 
-        this.vista.crear.jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.crear.getGuardarCo().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.crearCoronel(vista.crear.jTextField11, vista.crear.jTextField12, vista.crear.jTextField13, vista.crear.jTextField14);
+        		modelo.crearCoronel(vista.crear.getNombreCo(), vista.crear.getCodigoCo(), vista.crear.getUnidadCo(), vista.crear.getEstrategiaCo());
             }
         });
 
-        this.vista.actualizar.jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.actualizar.getGuardarR().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.actualizarRaso(vista.actualizar.jTextField1, vista.actualizar.jTextField2, vista.actualizar.jTextField3);
+        		modelo.actualizarRaso(vista.actualizar.getNombreR(), vista.actualizar.getCodigoR(), vista.actualizar.getUnidadR());
 				vista.menuA();
-				modelo.leerLista(vista.menu.Lista_Soldados);
+				modelo.leerLista(vista.menu.getLista_Soldados());
             }
         });
 
-        this.vista.actualizar.jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.actualizar.getGuardarT().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.actualizarTeniente(vista.actualizar.jTextField5, vista.actualizar.jTextField7, vista.actualizar.jTextField6);
+        		modelo.actualizarTeniente(vista.actualizar.getNombreT(), vista.actualizar.getCodigoT(), vista.actualizar.getUnidadT());
 				vista.menuA();
-				modelo.leerLista(vista.menu.Lista_Soldados);
+				modelo.leerLista(vista.menu.getLista_Soldados());
             }
         });
 
-        this.vista.actualizar.jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.actualizar.getGuardarCa().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.actualizarCapitan(vista.actualizar.jTextField4, vista.actualizar.jTextField8, vista.actualizar.jTextField9, vista.actualizar.jTextField10);
+        		modelo.actualizarCapitan(vista.actualizar.getNombreCa(), vista.actualizar.getCodigoCa(), vista.actualizar.getUnidadCa(), vista.actualizar.getUnidadesCa());
 				vista.menuA();
-				modelo.leerLista(vista.menu.Lista_Soldados);
+				modelo.leerLista(vista.menu.getLista_Soldados());
 			}
         });
 
-        this.vista.actualizar.jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.actualizar.getGuardarCo().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.actualizarCoronel(vista.actualizar.jTextField11, vista.actualizar.jTextField12, vista.actualizar.jTextField13, vista.actualizar.jTextField14);
+        		modelo.actualizarCoronel(vista.actualizar.getNombreCo(), vista.actualizar.getCodigoCo(), vista.actualizar.getUnidadCo(), vista.actualizar.getEstrategiaCo());
 				vista.menuA();
-				modelo.leerLista(vista.menu.Lista_Soldados);
+				modelo.leerLista(vista.menu.getLista_Soldados());
 			}
         });
 
-        this.vista.realizarAccion.jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.realizarAccion.getVolver().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
                 vista.menuRA();
-				modelo.leerLista(vista.menu.Lista_Soldados);
+				modelo.leerLista(vista.menu.getLista_Soldados());
             }
         });
 
-        this.vista.realizarAccion.jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.realizarAccion.getDar_Orden().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.darOrdenAction(vista.realizarAccion.jList1, vista.realizarAccion.jList2, vista.realizarAccion.jLabel1);
+        		modelo.darOrdenAction(vista.realizarAccion.getSubordinado(), vista.realizarAccion.getSuperior(), vista.realizarAccion.getSalida());
             }
         });
 
-        this.vista.realizarAccion.jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.realizarAccion.getReganar().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.reganarAction(vista.realizarAccion.jList1, vista.realizarAccion.jList2, vista.realizarAccion.jLabel1);
+        		modelo.reganarAction(vista.realizarAccion.getSubordinado(), vista.realizarAccion.getSuperior(), vista.realizarAccion.getSalida());
             }
         });
 
-        this.vista.realizarAccion.jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.realizarAccion.getSaludar().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.saludarAction(vista.realizarAccion.jList1, vista.realizarAccion.jList2, vista.realizarAccion.jLabel1);
+        		modelo.saludarAction(vista.realizarAccion.getSubordinado(), vista.realizarAccion.getSuperior(), vista.realizarAccion.getSalida());
             }
         });
 
-        this.vista.realizarAccion.jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        this.vista.realizarAccion.getPatrullar().addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-        		modelo.patrullarAction(vista.realizarAccion.jList1, vista.realizarAccion.jList2, vista.realizarAccion.jLabel1);
+        		modelo.patrullarAction(vista.realizarAccion.getSubordinado(), vista.realizarAccion.getSuperior(), vista.realizarAccion.getSalida());
             }
         });
 	}

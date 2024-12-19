@@ -1,12 +1,7 @@
 package miniproyecto.Menu;
 
-
-import miniproyecto.Soldados.SoldadoRaso;
-import miniproyecto.Soldados.Teniente;
-import miniproyecto.Soldados.Capitan;
-import miniproyecto.Soldados.Coronel;
-
-import miniproyecto.app.Modelo;
+import javax.swing.JButton;
+import javax.swing.JTextField;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -46,41 +41,41 @@ public class Crear extends javax.swing.JFrame {
         Panel_Ingreso = new javax.swing.JPanel();
         Multi_Panel = new javax.swing.JTabbedPane();
         Soldado_raso_crear = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        NombreR = new javax.swing.JTextField();
+        CodigoR = new javax.swing.JTextField();
+        UnidadR = new javax.swing.JTextField();
+        GuardarR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Coronel_crear = new javax.swing.JPanel();
+        Teniente_crear = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        Teniente_crear = new javax.swing.JPanel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        NombreT = new javax.swing.JTextField();
+        CodigoT = new javax.swing.JTextField();
+        UnidadT = new javax.swing.JTextField();
+        GuardarT = new javax.swing.JButton();
+        Capitan_crear = new javax.swing.JPanel();
+        NombreCa = new javax.swing.JTextField();
+        CodigoCa = new javax.swing.JTextField();
+        UnidadCa = new javax.swing.JTextField();
+        UnidadesCa = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        Capitan_crear = new javax.swing.JPanel();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
+        GuardarCa = new javax.swing.JButton();
+        Coronel_crear = new javax.swing.JPanel();
+        NombreCo = new javax.swing.JTextField();
+        CodigoCo = new javax.swing.JTextField();
+        UnidadCo = new javax.swing.JTextField();
+        EstrategiaCo = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        GuardarCo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -146,11 +141,6 @@ public class Crear extends javax.swing.JFrame {
         Volver_boton.setText("Volver");
         Volver_boton.setToolTipText("");
         Volver_boton.setBorder(null);
-        Volver_boton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Volver_botonActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout Panel_botonesLayout = new javax.swing.GroupLayout(Panel_botones);
         Panel_botones.setLayout(Panel_botonesLayout);
@@ -197,38 +187,23 @@ public class Crear extends javax.swing.JFrame {
 
         Soldado_raso_crear.setBackground(new java.awt.Color(49, 81, 30));
 
-        jTextField1.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        NombreR.setBackground(new java.awt.Color(26, 26, 25));
+        NombreR.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        NombreR.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField2.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
+        CodigoR.setBackground(new java.awt.Color(26, 26, 25));
+        CodigoR.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        CodigoR.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField3.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
+        UnidadR.setBackground(new java.awt.Color(26, 26, 25));
+        UnidadR.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        UnidadR.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton2.setBackground(new java.awt.Color(15, 15, 15));
-        jButton2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Guardar");
-        jButton2.setBorder(null);
+        GuardarR.setBackground(new java.awt.Color(15, 15, 15));
+        GuardarR.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        GuardarR.setForeground(new java.awt.Color(255, 255, 255));
+        GuardarR.setText("Guardar");
+        GuardarR.setBorder(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
@@ -253,12 +228,12 @@ public class Crear extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(20, 20, 20)
                         .addGroup(Soldado_raso_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)))
+                            .addComponent(CodigoR, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                            .addComponent(UnidadR, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                            .addComponent(NombreR, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)))
                     .addGroup(Soldado_raso_crearLayout.createSequentialGroup()
                         .addGap(170, 170, 170)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(GuardarR, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Soldado_raso_crearLayout.setVerticalGroup(
@@ -266,24 +241,24 @@ public class Crear extends javax.swing.JFrame {
             .addGroup(Soldado_raso_crearLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(Soldado_raso_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NombreR, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(20, 20, 20)
                 .addGroup(Soldado_raso_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CodigoR, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(20, 20, 20)
                 .addGroup(Soldado_raso_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UnidadR, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GuardarR, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
 
         Multi_Panel.addTab("Raso", Soldado_raso_crear);
 
-        Coronel_crear.setBackground(new java.awt.Color(49, 81, 30));
+        Teniente_crear.setBackground(new java.awt.Color(49, 81, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Nombre");
@@ -294,94 +269,89 @@ public class Crear extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Codigo");
 
-        jTextField5.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
+        NombreT.setBackground(new java.awt.Color(26, 26, 25));
+        NombreT.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        NombreT.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField6.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
+        CodigoT.setBackground(new java.awt.Color(26, 26, 25));
+        CodigoT.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        CodigoT.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField7.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
+        UnidadT.setBackground(new java.awt.Color(26, 26, 25));
+        UnidadT.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        UnidadT.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton3.setBackground(new java.awt.Color(15, 15, 15));
-        jButton3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Guardar");
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        GuardarT.setBackground(new java.awt.Color(15, 15, 15));
+        GuardarT.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        GuardarT.setForeground(new java.awt.Color(255, 255, 255));
+        GuardarT.setText("Guardar");
+        GuardarT.setBorder(null);
 
-        javax.swing.GroupLayout Coronel_crearLayout = new javax.swing.GroupLayout(Coronel_crear);
-        Coronel_crear.setLayout(Coronel_crearLayout);
-        Coronel_crearLayout.setHorizontalGroup(
-            Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Coronel_crearLayout.createSequentialGroup()
-                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Coronel_crearLayout.createSequentialGroup()
+        javax.swing.GroupLayout Teniente_crearLayout = new javax.swing.GroupLayout(Teniente_crear);
+        Teniente_crear.setLayout(Teniente_crearLayout);
+        Teniente_crearLayout.setHorizontalGroup(
+            Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Teniente_crearLayout.createSequentialGroup()
+                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Teniente_crearLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(Coronel_crearLayout.createSequentialGroup()
+                        .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(Teniente_crearLayout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Coronel_crearLayout.createSequentialGroup()
+                                .addComponent(CodigoT, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Teniente_crearLayout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(20, 20, 20)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Coronel_crearLayout.createSequentialGroup()
+                                .addComponent(NombreT, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Teniente_crearLayout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(26, 26, 26)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(Coronel_crearLayout.createSequentialGroup()
+                                .addComponent(UnidadT, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(Teniente_crearLayout.createSequentialGroup()
                         .addGap(170, 170, 170)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(GuardarT, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        Coronel_crearLayout.setVerticalGroup(
-            Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Coronel_crearLayout.createSequentialGroup()
+        Teniente_crearLayout.setVerticalGroup(
+            Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Teniente_crearLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NombreT, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CodigoT, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(20, 20, 20)
-                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(UnidadT, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GuardarT, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
 
-        Multi_Panel.addTab("Ten", Coronel_crear);
+        Multi_Panel.addTab("Ten", Teniente_crear);
 
-        Teniente_crear.setBackground(new java.awt.Color(49, 81, 30));
+        Capitan_crear.setBackground(new java.awt.Color(49, 81, 30));
 
-        jTextField4.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
+        NombreCa.setBackground(new java.awt.Color(26, 26, 25));
+        NombreCa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        NombreCa.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField8.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(255, 255, 255));
+        CodigoCa.setBackground(new java.awt.Color(26, 26, 25));
+        CodigoCa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        CodigoCa.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField9.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(255, 255, 255));
+        UnidadCa.setBackground(new java.awt.Color(26, 26, 25));
+        UnidadCa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        UnidadCa.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField10.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(255, 255, 255));
+        UnidadesCa.setBackground(new java.awt.Color(26, 26, 25));
+        UnidadesCa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        UnidadesCa.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Nombre");
@@ -395,102 +365,92 @@ public class Crear extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("Unidades");
 
-        jButton4.setBackground(new java.awt.Color(15, 15, 15));
-        jButton4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Guardar");
-        jButton4.setBorder(null);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
+        GuardarCa.setBackground(new java.awt.Color(15, 15, 15));
+        GuardarCa.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        GuardarCa.setForeground(new java.awt.Color(255, 255, 255));
+        GuardarCa.setText("Guardar");
+        GuardarCa.setBorder(null);
 
-        javax.swing.GroupLayout Teniente_crearLayout = new javax.swing.GroupLayout(Teniente_crear);
-        Teniente_crear.setLayout(Teniente_crearLayout);
-        Teniente_crearLayout.setHorizontalGroup(
-            Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Teniente_crearLayout.createSequentialGroup()
-                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Teniente_crearLayout.createSequentialGroup()
+        javax.swing.GroupLayout Capitan_crearLayout = new javax.swing.GroupLayout(Capitan_crear);
+        Capitan_crear.setLayout(Capitan_crearLayout);
+        Capitan_crearLayout.setHorizontalGroup(
+            Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Capitan_crearLayout.createSequentialGroup()
+                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Capitan_crearLayout.createSequentialGroup()
                                 .addGap(89, 89, 89)
-                                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Teniente_crearLayout.createSequentialGroup()
+                                .addComponent(UnidadesCa, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Capitan_crearLayout.createSequentialGroup()
                                 .addGap(71, 71, 71)
-                                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Teniente_crearLayout.createSequentialGroup()
+                                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CodigoCa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(UnidadCa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Capitan_crearLayout.createSequentialGroup()
                             .addGap(20, 20, 20)
-                            .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Teniente_crearLayout.createSequentialGroup()
+                            .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Capitan_crearLayout.createSequentialGroup()
                                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(Teniente_crearLayout.createSequentialGroup()
-                                    .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(NombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(Capitan_crearLayout.createSequentialGroup()
+                                    .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel9)
                                             .addComponent(jLabel10))
-                                        .addGroup(Teniente_crearLayout.createSequentialGroup()
+                                        .addGroup(Capitan_crearLayout.createSequentialGroup()
                                             .addComponent(jLabel8)
                                             .addGap(13, 13, 13)))
                                     .addGap(0, 0, Short.MAX_VALUE)))))
-                    .addGroup(Teniente_crearLayout.createSequentialGroup()
+                    .addGroup(Capitan_crearLayout.createSequentialGroup()
                         .addGap(170, 170, 170)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(GuardarCa, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
-        Teniente_crearLayout.setVerticalGroup(
-            Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Teniente_crearLayout.createSequentialGroup()
+        Capitan_crearLayout.setVerticalGroup(
+            Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Capitan_crearLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(20, 20, 20)
-                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CodigoCa, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addGap(20, 20, 20)
-                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(UnidadCa, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(20, 20, 20)
-                .addGroup(Teniente_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(UnidadesCa, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GuardarCa, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
 
-        Multi_Panel.addTab("Cap", Teniente_crear);
+        Multi_Panel.addTab("Cap", Capitan_crear);
 
-        Capitan_crear.setBackground(new java.awt.Color(49, 81, 30));
+        Coronel_crear.setBackground(new java.awt.Color(49, 81, 30));
 
-        jTextField11.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField11.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
-            }
-        });
+        NombreCo.setBackground(new java.awt.Color(26, 26, 25));
+        NombreCo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        NombreCo.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField12.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField12.setForeground(new java.awt.Color(255, 255, 255));
+        CodigoCo.setBackground(new java.awt.Color(26, 26, 25));
+        CodigoCo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        CodigoCo.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField13.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField13.setForeground(new java.awt.Color(255, 255, 255));
+        UnidadCo.setBackground(new java.awt.Color(26, 26, 25));
+        UnidadCo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        UnidadCo.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextField14.setBackground(new java.awt.Color(26, 26, 25));
-        jTextField14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField14.setForeground(new java.awt.Color(255, 255, 255));
+        EstrategiaCo.setBackground(new java.awt.Color(26, 26, 25));
+        EstrategiaCo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        EstrategiaCo.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("Nombre");
@@ -504,67 +464,67 @@ public class Crear extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Estrategia");
 
-        jButton5.setBackground(new java.awt.Color(15, 15, 15));
-        jButton5.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Guardar");
-        jButton5.setBorder(null);
+        GuardarCo.setBackground(new java.awt.Color(15, 15, 15));
+        GuardarCo.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        GuardarCo.setForeground(new java.awt.Color(255, 255, 255));
+        GuardarCo.setText("Guardar");
+        GuardarCo.setBorder(null);
 
-        javax.swing.GroupLayout Capitan_crearLayout = new javax.swing.GroupLayout(Capitan_crear);
-        Capitan_crear.setLayout(Capitan_crearLayout);
-        Capitan_crearLayout.setHorizontalGroup(
-            Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Capitan_crearLayout.createSequentialGroup()
+        javax.swing.GroupLayout Coronel_crearLayout = new javax.swing.GroupLayout(Coronel_crear);
+        Coronel_crear.setLayout(Coronel_crearLayout);
+        Coronel_crearLayout.setHorizontalGroup(
+            Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Coronel_crearLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(Capitan_crearLayout.createSequentialGroup()
+                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Coronel_crearLayout.createSequentialGroup()
                         .addComponent(jLabel14)
                         .addGap(20, 20, 20)
-                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(Capitan_crearLayout.createSequentialGroup()
+                        .addComponent(EstrategiaCo, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(Coronel_crearLayout.createSequentialGroup()
                             .addComponent(jLabel11)
                             .addGap(20, 20, 20)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Capitan_crearLayout.createSequentialGroup()
-                            .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(NombreCo, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Coronel_crearLayout.createSequentialGroup()
+                            .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel13)
                                 .addComponent(jLabel12))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(CodigoCo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(UnidadCo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(55, Short.MAX_VALUE))
-            .addGroup(Capitan_crearLayout.createSequentialGroup()
+            .addGroup(Coronel_crearLayout.createSequentialGroup()
                 .addGap(170, 170, 170)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GuardarCo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        Capitan_crearLayout.setVerticalGroup(
-            Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Capitan_crearLayout.createSequentialGroup()
+        Coronel_crearLayout.setVerticalGroup(
+            Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Coronel_crearLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NombreCo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addGap(20, 20, 20)
-                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CodigoCo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
                 .addGap(20, 20, 20)
-                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(UnidadCo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addGap(20, 20, 20)
-                .addGroup(Capitan_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Coronel_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EstrategiaCo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GuardarCo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
 
-        Multi_Panel.addTab("Cor", Capitan_crear);
+        Multi_Panel.addTab("Cor", Coronel_crear);
 
         javax.swing.GroupLayout Panel_IngresoLayout = new javax.swing.GroupLayout(Panel_Ingreso);
         Panel_Ingreso.setLayout(Panel_IngresoLayout);
@@ -596,6 +556,14 @@ public class Crear extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void Coronel_BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Coronel_BotonActionPerformed
+        Multi_Panel.setSelectedIndex(3);
+    }//GEN-LAST:event_Coronel_BotonActionPerformed
+
+    private void Capitan_BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Capitan_BotonActionPerformed
+        Multi_Panel.setSelectedIndex(2);
+    }//GEN-LAST:event_Capitan_BotonActionPerformed
+
     private void Teniente_BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Teniente_BotonActionPerformed
         Multi_Panel.setSelectedIndex(1);
     }//GEN-LAST:event_Teniente_BotonActionPerformed
@@ -604,49 +572,102 @@ public class Crear extends javax.swing.JFrame {
         Multi_Panel.setSelectedIndex(0);
     }//GEN-LAST:event_Soldado_BotonActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    public JButton getVolver_boton() {
+        return Volver_boton;
+    }
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    public JButton getGuardarR() {
+        return GuardarR;
+    }
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    public JButton getGuardarT() {
+        return GuardarT;
+    }
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    public JButton getGuardarCa() {
+        return GuardarCa;
+    }
 
-    private void Capitan_BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Capitan_BotonActionPerformed
-        Multi_Panel.setSelectedIndex(2);
-    }//GEN-LAST:event_Capitan_BotonActionPerformed
+    public JButton getGuardarCo() {
+        return GuardarCo;
+    }
 
-    private void Coronel_BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Coronel_BotonActionPerformed
-        Multi_Panel.setSelectedIndex(3);
-    }//GEN-LAST:event_Coronel_BotonActionPerformed
+    public JTextField getNombreR() {
+        return NombreR;
+    }
 
-    private void Volver_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volver_botonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Volver_botonActionPerformed
+    public JTextField getNombreT() {
+        return NombreT;
+    }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    public JTextField getNombreCa() {
+        return NombreCa;
+    }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    public JTextField getNombreCo() {
+        return NombreCo;
+    }
+
+    public JTextField getCodigoR() {
+        return CodigoR;
+    }
+
+    public JTextField getCodigoT() {
+        return CodigoT;
+    }
+
+    public JTextField getCodigoCa() {
+        return CodigoCa;
+    }
+
+    public JTextField getCodigoCo() {
+        return CodigoCo;
+    }
+
+    public JTextField getUnidadR() {
+        return UnidadR;
+    }
+
+    public JTextField getUnidadT() {
+        return UnidadT;
+    }
+
+    public JTextField getUnidadCa() {
+        return UnidadCa;
+    }
+
+    public JTextField getUnidadCo() {
+        return UnidadCo;
+    }
+
+    public JTextField getUnidadesCa() {
+        return UnidadesCa;
+    }
+
+    public JTextField getEstrategiaCo() {
+        return EstrategiaCo;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Bg_2;
     private javax.swing.JButton Capitan_Boton;
     private javax.swing.JPanel Capitan_crear;
+    private javax.swing.JTextField CodigoCa;
+    private javax.swing.JTextField CodigoCo;
+    private javax.swing.JTextField CodigoR;
+    private javax.swing.JTextField CodigoT;
     private javax.swing.JButton Coronel_Boton;
     private javax.swing.JPanel Coronel_crear;
+    private javax.swing.JTextField EstrategiaCo;
+    private javax.swing.JButton GuardarCa;
+    private javax.swing.JButton GuardarCo;
+    private javax.swing.JButton GuardarR;
+    private javax.swing.JButton GuardarT;
     private javax.swing.JTabbedPane Multi_Panel;
+    private javax.swing.JTextField NombreCa;
+    private javax.swing.JTextField NombreCo;
+    private javax.swing.JTextField NombreR;
+    private javax.swing.JTextField NombreT;
     private javax.swing.JPanel Panel_Ingreso;
     private javax.swing.JPanel Panel_botones;
     private javax.swing.JButton Soldado_Boton;
@@ -654,11 +675,12 @@ public class Crear extends javax.swing.JFrame {
     private javax.swing.JButton Teniente_Boton;
     private javax.swing.JPanel Teniente_crear;
     private javax.swing.JLabel Texto;
-    public javax.swing.JButton Volver_boton;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JButton jButton4;
-    public javax.swing.JButton jButton5;
+    private javax.swing.JTextField UnidadCa;
+    private javax.swing.JTextField UnidadCo;
+    private javax.swing.JTextField UnidadR;
+    private javax.swing.JTextField UnidadT;
+    private javax.swing.JTextField UnidadesCa;
+    private javax.swing.JButton Volver_boton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -673,19 +695,5 @@ public class Crear extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    public javax.swing.JTextField jTextField1;
-    public javax.swing.JTextField jTextField10;
-    public javax.swing.JTextField jTextField11;
-    public javax.swing.JTextField jTextField12;
-    public javax.swing.JTextField jTextField13;
-    public javax.swing.JTextField jTextField14;
-    public javax.swing.JTextField jTextField2;
-    public javax.swing.JTextField jTextField3;
-    public javax.swing.JTextField jTextField4;
-    public javax.swing.JTextField jTextField5;
-    public javax.swing.JTextField jTextField6;
-    public javax.swing.JTextField jTextField7;
-    public javax.swing.JTextField jTextField8;
-    public javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
