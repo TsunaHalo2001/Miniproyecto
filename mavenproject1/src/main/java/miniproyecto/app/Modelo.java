@@ -14,12 +14,20 @@ import miniproyecto.Soldados.SoldadoRaso;
 import miniproyecto.Soldados.Teniente;
 
 public class Modelo {
-    public ArrayList<SoldadoRaso> listaSoldadoRaso = new ArrayList<>();
-    public ArrayList<Teniente> listaTeniente = new ArrayList<>();
-    public ArrayList<Capitan> listaCapitan = new ArrayList<>();
-    public ArrayList<Coronel> listaCoronel = new ArrayList<>();
+    public ArrayList<SoldadoRaso> listaSoldadoRaso;
+    public ArrayList<Teniente> listaTeniente;
+    public ArrayList<Capitan> listaCapitan;
+    public ArrayList<Coronel> listaCoronel;
     
     public int index;
+
+    public Modelo() {
+        this.index = 0;
+        this.listaSoldadoRaso = new ArrayList<>();
+        this.listaTeniente = new ArrayList<>();
+        this.listaCapitan = new ArrayList<>();
+        this.listaCoronel = new ArrayList<>();
+    }
     
     private DefaultListModel limpiarLista (JList<String> Lista_Soldados) {
         DefaultListModel modelo = new DefaultListModel();
@@ -37,7 +45,7 @@ public class Modelo {
         return modelo;
     }
 
-    private void leerLista (JList<String> Lista_Soldados) {
+    public void leerLista (JList<String> Lista_Soldados) {
         limpiarLista(Lista_Soldados);
 
         if (Soldado.getContadorSoldados() > 0) {
@@ -62,7 +70,7 @@ public class Modelo {
         }
     }
 
-    private void eliminardeLista (JList<String> Lista_Soldados) {
+    public void eliminardeLista (JList<String> Lista_Soldados) {
         if (Lista_Soldados.getModel().getSize() > 0) {
             DefaultListModel modelo = (DefaultListModel) Lista_Soldados.getModel();
 
@@ -100,7 +108,7 @@ public class Modelo {
         }
     }
 
-    private void resetearLista (JList<String> Lista_Soldados) {
+    public void resetearLista (JList<String> Lista_Soldados) {
         limpiarLista(Lista_Soldados);
 
         Soldado.resetear();
@@ -110,7 +118,7 @@ public class Modelo {
         this.listaCapitan.clear();
     }
 
-    private void actualizarRaso (JTextField jTextField1, JTextField jTextField2, JTextField jTextField3) {
+    public void actualizarRaso (JTextField jTextField1, JTextField jTextField2, JTextField jTextField3) {
         if (jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty()) return;
 
         SoldadoRaso soldado = new SoldadoRaso(jTextField1.getText(), jTextField2.getText(), jTextField3.getText());
@@ -157,7 +165,7 @@ public class Modelo {
         }
     }
 
-    private void actualizarTeniente (JTextField jTextField5, JTextField jTextField7, JTextField jTextField6) {
+    public void actualizarTeniente (JTextField jTextField5, JTextField jTextField7, JTextField jTextField6) {
         if (jTextField5.getText().isEmpty() || jTextField6.getText().isEmpty() || jTextField7.getText().isEmpty()) return;
         Teniente teniente = new Teniente(jTextField5.getText(), jTextField7.getText(), jTextField6.getText());
         Soldado.setContSoldiers(Soldado.getContadorSoldados() - 1);
@@ -202,7 +210,7 @@ public class Modelo {
         }
     }
 
-    private void actualizarCapitan (JTextField jTextField4, JTextField jTextField8, JTextField jTextField9, JTextField jTextField10) {
+    public void actualizarCapitan (JTextField jTextField4, JTextField jTextField8, JTextField jTextField9, JTextField jTextField10) {
         if (jTextField4.getText().isEmpty() || jTextField8.getText().isEmpty() || jTextField9.getText().isEmpty() || jTextField10.getText().isEmpty()) return;
         if (!Character.isDigit(jTextField10.getText().charAt(0))) return;
 
@@ -251,7 +259,7 @@ public class Modelo {
         }
     }
 
-    private void actualizarCoronel (JTextField jTextField11, JTextField jTextField12, JTextField jTextField13, JTextField jTextField14) {
+    public void actualizarCoronel (JTextField jTextField11, JTextField jTextField12, JTextField jTextField13, JTextField jTextField14) {
         if (jTextField11.getText().isEmpty() || jTextField12.getText().isEmpty() || jTextField13.getText().isEmpty() || jTextField14.getText().isEmpty()) return;
 
         Coronel coronel = new Coronel(jTextField11.getText(), jTextField12.getText(), jTextField13.getText(), jTextField14.getText());
@@ -300,7 +308,7 @@ public class Modelo {
         }
     }
 
-    private void crearRaso (JTextField jTextField1, JTextField jTextField2, JTextField jTextField3) {
+    public void crearRaso (JTextField jTextField1, JTextField jTextField2, JTextField jTextField3) {
         if (jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty()) return;
 
         SoldadoRaso soldado = new SoldadoRaso(jTextField1.getText(), jTextField2.getText(), jTextField3.getText());
@@ -308,7 +316,7 @@ public class Modelo {
         this.listaSoldadoRaso.add(soldado);
     }
 
-    private void crearTeniente (JTextField jTextField5, JTextField jTextField7, JTextField jTextField6) {
+    public void crearTeniente (JTextField jTextField5, JTextField jTextField7, JTextField jTextField6) {
         if (jTextField5.getText().isEmpty() || jTextField6.getText().isEmpty() || jTextField7.getText().isEmpty()) return;
 
         Teniente teniente = new Teniente(jTextField5.getText(), jTextField7.getText(), jTextField6.getText());
@@ -316,7 +324,7 @@ public class Modelo {
         this.listaTeniente.add(teniente);
     }
 
-    private void crearCapitan (JTextField jTextField4, JTextField jTextField8, JTextField jTextField9, JTextField jTextField10) {
+    public void crearCapitan (JTextField jTextField4, JTextField jTextField8, JTextField jTextField9, JTextField jTextField10) {
         if (jTextField4.getText().isEmpty() || jTextField8.getText().isEmpty() || jTextField9.getText().isEmpty() || jTextField10.getText().isEmpty()) return;
         if (!Character.isDigit(jTextField10.getText().charAt(0))) return;
 
@@ -325,7 +333,7 @@ public class Modelo {
         this.listaCapitan.add(capitan);
     }
 
-    private void crearCoronel (JTextField jTextField11, JTextField jTextField12, JTextField jTextField13, JTextField jTextField14) {
+    public void crearCoronel (JTextField jTextField11, JTextField jTextField12, JTextField jTextField13, JTextField jTextField14) {
         if (jTextField11.getText().isEmpty() || jTextField12.getText().isEmpty() || jTextField13.getText().isEmpty() || jTextField14.getText().isEmpty()) return;
 
         Coronel coronel = new Coronel(jTextField11.getText(), jTextField12.getText(), jTextField13.getText(), jTextField14.getText());
@@ -333,7 +341,7 @@ public class Modelo {
         this.listaCoronel.add(coronel);
     }
 
-    private void darOrdenAction (JList jList1, JList jList2, JLabel jLabel1) {
+    public void darOrdenAction (JList<String> jList1, JList<String> jList2, JLabel jLabel1) {
         if (jList1.getSelectedIndex() == -1 || jList2.getSelectedIndex() == -1) {
             jLabel1.setText("Seleccione un soldado");
             return;
@@ -473,7 +481,7 @@ public class Modelo {
         }
     }
 
-    private void reganarAction (JList jList1, JList jList2, JLabel jLabel1) {
+    public void reganarAction (JList<String> jList1, JList<String> jList2, JLabel jLabel1) {
         if (jList1.getSelectedIndex() == -1 || jList2.getSelectedIndex() == -1) {
             jLabel1.setText("Seleccione un soldado");
             return;
@@ -613,7 +621,7 @@ public class Modelo {
         }
     }
 
-    private void saludarAction (JList jList1, JList jList2, JLabel jLabel1) {
+    public void saludarAction (JList<String> jList1, JList<String> jList2, JLabel jLabel1) {
         if (jList1.getSelectedIndex() == -1 || jList2.getSelectedIndex() == -1) {
             jLabel1.setText("Seleccione un soldado");
             return;
@@ -753,7 +761,7 @@ public class Modelo {
         }
     }
 
-    private void patrullarAction (JList jList1, JList jList2, JLabel jLabel1) {
+    public void patrullarAction (JList<String> jList1, JList<String> jList2, JLabel jLabel1) {
         if (jList1.getSelectedIndex() == -1 && jList2.getSelectedIndex() == -1) {
             jLabel1.setText("Seleccione un soldado");
             return;
