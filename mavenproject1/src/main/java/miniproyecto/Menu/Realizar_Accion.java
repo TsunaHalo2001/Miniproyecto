@@ -4,10 +4,9 @@
  */
 package miniproyecto.Menu;
 
-import javax.swing.DefaultListModel;
-
-import miniproyecto.Soldados.Soldado;
-import miniproyecto.app.Modelo;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
 
 /**
  *
@@ -33,20 +32,20 @@ public class Realizar_Accion extends javax.swing.JFrame {
 
         Bg_4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        Saludar = new javax.swing.JButton();
+        Patrullar = new javax.swing.JButton();
+        Volver = new javax.swing.JButton();
+        Reganar = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        Subordinados = new javax.swing.JScrollPane();
+        Subordinado = new javax.swing.JList<>();
+        Superiores = new javax.swing.JScrollPane();
+        Superior = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        Dar_Orden = new javax.swing.JButton();
+        Salida = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,34 +55,29 @@ public class Realizar_Accion extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(133, 159, 61));
 
-        jButton2.setBackground(new java.awt.Color(15, 15, 15));
-        jButton2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Saludar");
-        jButton2.setBorder(null);
+        Saludar.setBackground(new java.awt.Color(15, 15, 15));
+        Saludar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Saludar.setForeground(new java.awt.Color(255, 255, 255));
+        Saludar.setText("Saludar");
+        Saludar.setBorder(null);
 
-        jButton3.setBackground(new java.awt.Color(15, 15, 15));
-        jButton3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Patrullar");
-        jButton3.setBorder(null);
+        Patrullar.setBackground(new java.awt.Color(15, 15, 15));
+        Patrullar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Patrullar.setForeground(new java.awt.Color(255, 255, 255));
+        Patrullar.setText("Patrullar");
+        Patrullar.setBorder(null);
 
-        jButton5.setBackground(new java.awt.Color(15, 15, 15));
-        jButton5.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Volver");
-        jButton5.setBorder(null);
+        Volver.setBackground(new java.awt.Color(15, 15, 15));
+        Volver.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Volver.setForeground(new java.awt.Color(255, 255, 255));
+        Volver.setText("Volver");
+        Volver.setBorder(null);
 
-        jButton6.setBackground(new java.awt.Color(15, 15, 15));
-        jButton6.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Regañar");
-        jButton6.setBorder(null);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
+        Reganar.setBackground(new java.awt.Color(15, 15, 15));
+        Reganar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Reganar.setForeground(new java.awt.Color(255, 255, 255));
+        Reganar.setText("Regañar");
+        Reganar.setBorder(null);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -92,23 +86,23 @@ public class Realizar_Accion extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Patrullar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Volver, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Reganar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Saludar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Reganar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Saludar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Patrullar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(79, 79, 79)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Volver, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69))
         );
 
@@ -120,17 +114,17 @@ public class Realizar_Accion extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(49, 81, 30));
         jPanel3.setPreferredSize(new java.awt.Dimension(800, 500));
 
-        jList1.setBackground(new java.awt.Color(102, 102, 102));
-        jList1.setBorder(null);
-        jList1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jList1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane1.setViewportView(jList1);
+        Subordinado.setBackground(new java.awt.Color(102, 102, 102));
+        Subordinado.setBorder(null);
+        Subordinado.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Subordinado.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        Subordinados.setViewportView(Subordinado);
 
-        jList2.setBackground(new java.awt.Color(102, 102, 102));
-        jList2.setBorder(null);
-        jList2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jList2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane2.setViewportView(jList2);
+        Superior.setBackground(new java.awt.Color(102, 102, 102));
+        Superior.setBorder(null);
+        Superior.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Superior.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        Superiores.setViewportView(Superior);
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,11 +134,11 @@ public class Realizar_Accion extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Superior:");
 
-        jButton7.setBackground(new java.awt.Color(15, 15, 15));
-        jButton7.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Dar Orden");
-        jButton7.setBorder(null);
+        Dar_Orden.setBackground(new java.awt.Color(15, 15, 15));
+        Dar_Orden.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Dar_Orden.setForeground(new java.awt.Color(255, 255, 255));
+        Dar_Orden.setText("Dar Orden");
+        Dar_Orden.setBorder(null);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -153,16 +147,16 @@ public class Realizar_Accion extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Salida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Dar_Orden, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Subordinados, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(59, 59, 59)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Superiores, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(413, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -174,12 +168,12 @@ public class Realizar_Accion extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Subordinados, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Superiores, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Dar_Orden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
 
@@ -200,10 +194,6 @@ public class Realizar_Accion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,22 +230,54 @@ public class Realizar_Accion extends javax.swing.JFrame {
         });
     }
 
+    public JButton getDar_Orden() {
+        return Dar_Orden;
+    }
+
+    public JButton getPatrullar() {
+        return Patrullar;
+    }
+
+    public JButton getReganar() {
+        return Reganar;
+    }
+
+    public JButton getSaludar() {
+        return Saludar;
+    }
+
+    public JList<String> getSubordinado() {
+        return Subordinado;
+    }
+
+    public JList<String> getSuperior() {
+        return Superior;
+    }
+
+    public JButton getVolver() {
+        return Volver;
+    }
+
+    public JLabel getSalida() {
+        return Salida;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Bg_4;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JButton jButton5;
-    public javax.swing.JButton jButton6;
-    public javax.swing.JButton jButton7;
-    public javax.swing.JLabel jLabel1;
+    private javax.swing.JButton Dar_Orden;
+    private javax.swing.JButton Patrullar;
+    private javax.swing.JButton Reganar;
+    private javax.swing.JLabel Salida;
+    private javax.swing.JButton Saludar;
+    private javax.swing.JList<String> Subordinado;
+    private javax.swing.JScrollPane Subordinados;
+    private javax.swing.JList<String> Superior;
+    private javax.swing.JScrollPane Superiores;
+    private javax.swing.JButton Volver;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    public javax.swing.JList<String> jList1;
-    public javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }

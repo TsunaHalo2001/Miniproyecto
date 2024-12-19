@@ -4,12 +4,14 @@
  */
 package miniproyecto.Menu;
 
+import javax.swing.JButton;
+import javax.swing.JList;
+
 public class Menu extends javax.swing.JFrame {
 
     public Menu() {
         initComponents();
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -20,13 +22,13 @@ public class Menu extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Lista_Soldados = new javax.swing.JList<>();
         Lista_lateral = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Boton_Eliminar = new javax.swing.JButton();
         Resetear = new javax.swing.JButton();
         Panel_Datos = new javax.swing.JPanel();
         Boton_Crear = new javax.swing.JButton();
         Boton_Actualizar = new javax.swing.JButton();
         Bienvenida = new javax.swing.JLabel();
-        Boton_Visualizar1 = new javax.swing.JButton();
+        Boton_RealizarAccion = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Panel_Titulo = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
@@ -63,27 +65,17 @@ public class Menu extends javax.swing.JFrame {
         Lista_lateral.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lista_lateral.setText("Lista");
 
-        jButton1.setBackground(new java.awt.Color(15, 15, 15));
-        jButton1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Eliminar");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        Boton_Eliminar.setBackground(new java.awt.Color(15, 15, 15));
+        Boton_Eliminar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Boton_Eliminar.setForeground(new java.awt.Color(255, 255, 255));
+        Boton_Eliminar.setText("Eliminar");
+        Boton_Eliminar.setBorder(null);
 
         Resetear.setBackground(new java.awt.Color(26, 26, 25));
         Resetear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Resetear.setForeground(new java.awt.Color(255, 255, 255));
         Resetear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniproyecto/Img/Re.png"))); // NOI18N
         Resetear.setBorder(null);
-        Resetear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ResetearActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout Panel_listaLayout = new javax.swing.GroupLayout(Panel_lista);
         Panel_lista.setLayout(Panel_listaLayout);
@@ -101,7 +93,7 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(Panel_listaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Boton_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Resetear)
                 .addGap(22, 22, 22))
@@ -115,7 +107,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(Panel_listaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton_Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Resetear, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
         );
@@ -129,37 +121,22 @@ public class Menu extends javax.swing.JFrame {
         Boton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Crear.setText("Crear");
         Boton_Crear.setBorder(null);
-        Boton_Crear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_CrearActionPerformed(evt);
-            }
-        });
 
         Boton_Actualizar.setBackground(new java.awt.Color(15, 15, 15));
         Boton_Actualizar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         Boton_Actualizar.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Actualizar.setText("Actualizar");
         Boton_Actualizar.setBorder(null);
-        Boton_Actualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_ActualizarActionPerformed(evt);
-            }
-        });
 
         Bienvenida.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         Bienvenida.setForeground(new java.awt.Color(0, 0, 0));
         Bienvenida.setText("Bienvenido al sistema de gestion militar");
 
-        Boton_Visualizar1.setBackground(new java.awt.Color(15, 15, 15));
-        Boton_Visualizar1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        Boton_Visualizar1.setForeground(new java.awt.Color(255, 255, 255));
-        Boton_Visualizar1.setText("Realizar Accion");
-        Boton_Visualizar1.setBorder(null);
-        Boton_Visualizar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_Visualizar1ActionPerformed(evt);
-            }
-        });
+        Boton_RealizarAccion.setBackground(new java.awt.Color(15, 15, 15));
+        Boton_RealizarAccion.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Boton_RealizarAccion.setForeground(new java.awt.Color(255, 255, 255));
+        Boton_RealizarAccion.setText("Realizar Accion");
+        Boton_RealizarAccion.setBorder(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniproyecto/Img/1.jpg"))); // NOI18N
 
@@ -175,7 +152,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(Boton_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
-                        .addComponent(Boton_Visualizar1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Boton_RealizarAccion, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Panel_DatosLayout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -194,7 +171,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(Panel_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Boton_Crear, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Boton_Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton_Visualizar1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Boton_RealizarAccion, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(74, 74, 74))
@@ -243,49 +220,48 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    private void Boton_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_CrearActionPerformed
-        
-    }//GEN-LAST:event_Boton_CrearActionPerformed
-
-    private void Boton_ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ActualizarActionPerformed
-       
-    }//GEN-LAST:event_Boton_ActualizarActionPerformed
-
-    private void ResetearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetearActionPerformed
-
-    }//GEN-LAST:event_ResetearActionPerformed
-
-    private void Boton_Visualizar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Visualizar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Boton_Visualizar1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-
-    }
-
     private void Lista_SoldadosValueChanged(javax.swing.event.ListSelectionEvent evt) {                                    
         // TODO add your handling code here:
+    }
+
+    public JList<String> getLista_Soldados() {
+        return Lista_Soldados;
+    }
+
+    public JButton getBoton_Crear() {
+        return Boton_Crear;
+    }
+
+    public JButton getBoton_Actualizar() {
+        return Boton_Actualizar;
+    }
+
+    public JButton getBoton_RealizarAccion() {
+        return Boton_RealizarAccion;
+    }
+
+    public JButton getResetear() {
+        return Resetear;
+    }
+
+    public JButton getBoton_Eliminar() {
+        return Boton_Eliminar;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Bg_1;
     private javax.swing.JLabel Bienvenida;
-    public javax.swing.JButton Boton_Actualizar;
-    public javax.swing.JButton Boton_Crear;
-    public javax.swing.JButton Boton_Visualizar1;
-    public javax.swing.JList<String> Lista_Soldados;
+    private javax.swing.JButton Boton_Actualizar;
+    private javax.swing.JButton Boton_Crear;
+    private javax.swing.JButton Boton_Eliminar;
+    private javax.swing.JButton Boton_RealizarAccion;
+    private javax.swing.JList<String> Lista_Soldados;
     private javax.swing.JLabel Lista_lateral;
     private javax.swing.JPanel Panel_Datos;
     private javax.swing.JPanel Panel_Titulo;
     private javax.swing.JPanel Panel_lista;
-    public javax.swing.JButton Resetear;
+    private javax.swing.JButton Resetear;
     private javax.swing.JLabel Titulo;
-    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
