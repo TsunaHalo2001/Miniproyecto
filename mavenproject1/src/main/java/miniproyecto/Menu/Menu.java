@@ -6,6 +6,9 @@ package miniproyecto.Menu;
 
 import javax.swing.JButton;
 import javax.swing.JList;
+import javax.swing.JRadioButton;
+
+import miniproyecto.app.Vista;
 
 public class Menu extends javax.swing.JFrame {
 
@@ -32,6 +35,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Panel_Titulo = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
+        GUITSelector = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,11 +57,6 @@ public class Menu extends javax.swing.JFrame {
         Lista_Soldados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Lista_Soldados.setToolTipText("");
         Lista_Soldados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Lista_Soldados.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                Lista_SoldadosValueChanged(evt);
-            }
-        });
         jScrollPane1.setViewportView(Lista_Soldados);
 
         Lista_lateral.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -206,6 +205,9 @@ public class Menu extends javax.swing.JFrame {
 
         Bg_1.add(Panel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 490, 30));
 
+        GUITSelector.setText("Terminal");
+        Bg_1.add(GUITSelector, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -219,10 +221,6 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Lista_SoldadosValueChanged(javax.swing.event.ListSelectionEvent evt) {                                    
-        // TODO add your handling code here:
-    }
 
     public JList<String> getLista_Soldados() {
         return Lista_Soldados;
@@ -248,6 +246,10 @@ public class Menu extends javax.swing.JFrame {
         return Boton_Eliminar;
     }
 
+    public JRadioButton getGUITSelector() {
+        return GUITSelector;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Bg_1;
     private javax.swing.JLabel Bienvenida;
@@ -255,6 +257,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton Boton_Crear;
     private javax.swing.JButton Boton_Eliminar;
     private javax.swing.JButton Boton_RealizarAccion;
+    private javax.swing.JRadioButton GUITSelector;
     private javax.swing.JList<String> Lista_Soldados;
     private javax.swing.JLabel Lista_lateral;
     private javax.swing.JPanel Panel_Datos;

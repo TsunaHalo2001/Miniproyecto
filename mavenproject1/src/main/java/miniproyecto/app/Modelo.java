@@ -18,15 +18,29 @@ public class Modelo {
     public ArrayList<Teniente> listaTeniente;
     public ArrayList<Capitan> listaCapitan;
     public ArrayList<Coronel> listaCoronel;
+
+    public String[] Raux;
+    public String[] Taux;
+    public String[] Caaux;
+    public String[] Coaux;
     
     public int index;
 
+    public boolean gui;
+    public int state;
+
     public Modelo() {
+        this.gui = true;
         this.index = 0;
         this.listaSoldadoRaso = new ArrayList<>();
         this.listaTeniente = new ArrayList<>();
         this.listaCapitan = new ArrayList<>();
         this.listaCoronel = new ArrayList<>();
+
+        this.Raux = new String[3];
+        this.Taux = new String[3];
+        this.Caaux = new String[4];
+        this.Coaux = new String[4];
     }
     
     private DefaultListModel limpiarLista (JList<String> Lista_Soldados) {
