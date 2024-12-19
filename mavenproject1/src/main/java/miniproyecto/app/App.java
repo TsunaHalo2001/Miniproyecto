@@ -6,7 +6,7 @@ public class App {
         Modelo modelo = new Modelo();
         Vista vista = new Vista();
 
-        Controlador controlador = new Controlador(modelo, vista);
+        Controlador controlador = new Controlador(vista, modelo);
         /*Scanner opcion = new Scanner(System.in); 
         
         while (true) {

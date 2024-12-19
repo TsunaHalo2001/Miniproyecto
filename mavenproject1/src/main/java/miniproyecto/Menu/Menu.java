@@ -4,22 +4,10 @@
  */
 package miniproyecto.Menu;
 
-import javax.swing.DefaultListModel;
-import javax.swing.ImageIcon;
-import javax.swing.event.ListSelectionEvent;
-
-import miniproyecto.Soldados.Soldado;
-import miniproyecto.Soldados.SoldadoRaso;
-import miniproyecto.Soldados.Teniente;
-import miniproyecto.Soldados.Coronel;
-import miniproyecto.Soldados.Capitan;
-import miniproyecto.app.Modelo;
-
 public class Menu extends javax.swing.JFrame {
 
     public Menu() {
         initComponents();
-        modelo.leerLista(Lista_Soldados);
     }
 
 
@@ -80,11 +68,6 @@ public class Menu extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Eliminar");
         jButton1.setBorder(null);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -96,11 +79,6 @@ public class Menu extends javax.swing.JFrame {
         Resetear.setForeground(new java.awt.Color(255, 255, 255));
         Resetear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniproyecto/Img/Re.png"))); // NOI18N
         Resetear.setBorder(null);
-        Resetear.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ResetearMouseClicked(evt);
-            }
-        });
         Resetear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResetearActionPerformed(evt);
@@ -151,11 +129,6 @@ public class Menu extends javax.swing.JFrame {
         Boton_Crear.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Crear.setText("Crear");
         Boton_Crear.setBorder(null);
-        Boton_Crear.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Boton_CrearMouseClicked(evt);
-            }
-        });
         Boton_Crear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_CrearActionPerformed(evt);
@@ -167,11 +140,6 @@ public class Menu extends javax.swing.JFrame {
         Boton_Actualizar.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Actualizar.setText("Actualizar");
         Boton_Actualizar.setBorder(null);
-        Boton_Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Boton_ActualizarMouseClicked(evt);
-            }
-        });
         Boton_Actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_ActualizarActionPerformed(evt);
@@ -187,11 +155,6 @@ public class Menu extends javax.swing.JFrame {
         Boton_Visualizar1.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Visualizar1.setText("Realizar Accion");
         Boton_Visualizar1.setBorder(null);
-        Boton_Visualizar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Boton_Visualizar1MouseClicked(evt);
-            }
-        });
         Boton_Visualizar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_Visualizar1ActionPerformed(evt);
@@ -293,42 +256,9 @@ public class Menu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_ResetearActionPerformed
 
-    private void Boton_CrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_CrearMouseClicked
-        Crear Cr = new Crear();
-        Cr.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_Boton_CrearMouseClicked
-
     private void Boton_Visualizar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Visualizar1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Boton_Visualizar1ActionPerformed
-
-    private void Boton_ActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_ActualizarMouseClicked
-        if (Lista_Soldados.getSelectedIndex() != -1) {
-            Actualizar Act = new Actualizar();
-            modelo.index = Lista_Soldados.getSelectedIndex();
-            Act.setVisible(true);
-
-            dispose();
-        }
-    }//GEN-LAST:event_Boton_ActualizarMouseClicked
-
-    private void Boton_Visualizar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Visualizar1MouseClicked
-        Realizar_Accion Realizar = new Realizar_Accion();
-
-        Realizar.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_Boton_Visualizar1MouseClicked
-
-    private void ResetearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResetearMouseClicked
-        // TODO add your handling code here:
-        modelo.resetearLista(Lista_Soldados);
-    }//GEN-LAST:event_ResetearMouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-        modelo.eliminardeLista(Lista_Soldados);
-    }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -345,17 +275,17 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Bg_1;
     private javax.swing.JLabel Bienvenida;
-    private javax.swing.JButton Boton_Actualizar;
-    private javax.swing.JButton Boton_Crear;
-    private javax.swing.JButton Boton_Visualizar1;
-    private javax.swing.JList<String> Lista_Soldados;
+    public javax.swing.JButton Boton_Actualizar;
+    public javax.swing.JButton Boton_Crear;
+    public javax.swing.JButton Boton_Visualizar1;
+    public javax.swing.JList<String> Lista_Soldados;
     private javax.swing.JLabel Lista_lateral;
     private javax.swing.JPanel Panel_Datos;
     private javax.swing.JPanel Panel_Titulo;
     private javax.swing.JPanel Panel_lista;
-    private javax.swing.JButton Resetear;
+    public javax.swing.JButton Resetear;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
